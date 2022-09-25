@@ -14,5 +14,5 @@ export const SpinLogo = props => {
     ? undefined
     : `${spin} infinite 20s linear`;
 
-  return <Image width="32px" left="-15px" zIndex="1" position="absolute" top="-13px" animation={animation} src={logo} {...props} />;
+  return <Image width="32px" left="-15px" zIndex="1" position="absolute" top="-14px" animation={animation} src={logo} {...props} />;
 };
