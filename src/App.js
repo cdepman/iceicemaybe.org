@@ -28,9 +28,9 @@ function App() {
           <Heading w={{ '2xl': '40%', xl: '50%', lg: '60%', md: '70%', sm: '80%', base: '80%' }} fontSize={{ lg: '7xl', md: '4xl', sm: '3xl' }}>
             Let's decommodify ice with the help of the sun.
           </Heading>
-          <Box>
+          <Box position='relative'>
             <SpinLogo />
-            <Button colorScheme='linkedin'  >Apply Here</Button>
+            <Button colorScheme='linkedin' >Apply Here</Button>
           </Box>
           <Box
             fontSize={{ xl: '3xl', md: '2xl', sm: 'lg' }}
