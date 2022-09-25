@@ -4,13 +4,10 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
   VStack,
-  Code,
   Flex,
   Heading,
   Button,
-  Spacer,
 } from '@chakra-ui/react';
 import { Logo } from './components/Logo';
 import { NavBarContainer } from './components/NavbarContainer'
