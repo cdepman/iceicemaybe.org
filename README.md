@@ -1,3 +1,8 @@
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f3e33404-4690-460f-be93-c75f53e17b1f/deploy-status)](https://app.netlify.com/sites/incredible-cobbler-673daa/deploys)
+
+Deployed on Netlify: [https://www.iceicemaybe.org](https://www.iceicemaybe.org)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
