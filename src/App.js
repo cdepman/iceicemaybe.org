@@ -53,7 +53,7 @@ function App() {
             </Text>
             <br></br>
             <Text>
-              A third principle of Burning Man is <Text as="i">Gifting</Text>. We are proposing to create a solar-powered ice camp that gifts ice in reusable ice containers. We want to start small, creating enough ice to provide to ourselves and immediate neighbors. In the future, we can potentially scale up and provide more solar ice to the playa.
+              A third principle of Burning Man is <Text as="i">Gifting</Text>. We are proposing to create a solar-powered ice camp that gifts ice in reusable containers. We want to start small, creating enough ice to provide to ourselves and immediate neighbors. In the future, we can potentially scale up and provide more solar ice to the playa.
             </Text>
           </Box>
           <Box>
