@@ -60,7 +60,7 @@ function App() {
             <Image src={solarPanels} />
           </Box>
           <Box>
-            <Text>This website runs for free on Netlify and is open-source <Link color='blue.300' href='https://github.com/cdepman/iceicemaybe.org'>here.</Link></Text>
+            <Text>This website runs for free on Netlify and is open-source <Link target="_blank" color='blue.300' href='https://github.com/cdepman/iceicemaybe.org'>here.</Link></Text>
           </Box>
           <Spacer></Spacer>
         </VStack>
