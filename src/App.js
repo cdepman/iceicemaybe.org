@@ -9,6 +9,7 @@ import {
   Heading,
   Image,
   Button,
+  Link,
 } from '@chakra-ui/react';
 import { Logo } from './components/Logo';
 import { NavBarContainer } from './components/NavbarContainer'
@@ -56,6 +57,9 @@ function App() {
           </Box>
           <Box>
             <Image src={solarPanels} />
+          </Box>
+          <Box>
+            <Text>This website runs for free on Netlify and is open-source <Link color='blue.300' href='https://github.com/cdepman/iceicemaybe.org'>here.</Link></Text>
           </Box>
         </VStack>
       </Box>
