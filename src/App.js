@@ -27,27 +27,29 @@ function App() {
         <VStack spacing={8}>
           <Heading
             w={{ '2xl': '40%', xl: '50%', lg: '60%', md: '70%', sm: '80%', base: '80%' }}
-            fontSize={{ lg: '7xl', md: '4xl', sm: '3xl', base: '2xl' }}
+            fontSize={{ lg: '6xl', md: '4xl', sm: '3xl', base: '2xl' }}
             pb="10px"
           >
-            Let's decommodify ice with the help of the sun.
+            Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
           <Box position='relative'>
             <SpinLogo />
             <Button p="24px" colorScheme='linkedin' >Apply Here</Button>
           </Box>
           <Box
-            fontSize={{ xl: '3xl', md: '2xl', sm: 'lg' }}
+            fontSize={{ xl: '3xl', md: '2xl', sm: 'lg', base: 'md' }}
             textAlign="left"
-            padding="2% 10% 2% 10%"
-            style={{ textIndent: '40px' }}>
+            padding="2% 10% 2% 10%">
             <Text>
-              Decommodification is a core tenet of Burning Man. In 2022, Burning Man moved closer to full decommodification by removing coffee purchasing from Center Camp. Coffee is provided as a gift by other camps. Ice has not been decommodified. Ice can be purchased on playa at an establishment called Arctica by cash, credit card or Apple pay, but it really kills the decommodification vibe and is expensive for camps.            </Text>
-            <Text>
-              Another principle of Burning Man is Leaving No Trace. The ice that Arctica serves has a large environmental impact because it comes in disposable plastic bags and it must be trucked into the desert on huge, gas-powered refrigerated trucks from Reno. Not great.
+              <Text as="i">Decommodification</Text> is a core principle of Burning Man. In 2022, Burning Man moved closer to full decommodification by removing coffee purchasing from Center Camp. Coffee is provided as a gift by other camps. Ice has not been decommodified. Ice can be purchased on playa at an establishment called Arctica by cash, credit card or Apple pay, but it really kills the decommodification vibe and can be expensive for camps.
             </Text>
+            <br></br>
             <Text>
-              A third principle of Burning Man is Gifting. We are proposing to create a solar-powered ice camp that gifts ice with reusable ice containers. We want to start small, creating enough ice to provide to ourselves and immediate neighbors. In the future, we can potentially scale up and provide more solar ice to the playa.
+              Another principle of Burning Man is <Text as="i">Leaving No Trace</Text>. The ice that Arctica serves has a large environmental impact because it comes in disposable plastic bags and it must be trucked into the desert on huge, gas-powered refrigerated trucks from Reno. Not great.
+            </Text>
+            <br></br>
+            <Text>
+              A third principle of Burning Man is <Text as="i">Gifting</Text>. We are proposing to create a solar-powered ice camp that gifts ice in reusable ice containers. We want to start small, creating enough ice to provide to ourselves and immediate neighbors. In the future, we can potentially scale up and provide more solar ice to the playa.
             </Text>
           </Box>
         </VStack>
