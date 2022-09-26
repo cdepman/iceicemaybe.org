@@ -7,12 +7,14 @@ import {
   VStack,
   Flex,
   Heading,
+  Image,
   Button,
 } from '@chakra-ui/react';
 import { Logo } from './components/Logo';
 import { NavBarContainer } from './components/NavbarContainer'
 import theme from './theme'
 import { SpinLogo } from './components/SpinLogo';
+import solarPanels from './solarPanels.svg'
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
           </Heading>
           <Box position='relative'>
             <SpinLogo />
-            <Button p="24px" colorScheme='linkedin' >Apply Here</Button>
+            <Button p="24px" colorScheme='linkedin' >Join Us</Button>
           </Box>
           <Box
             fontSize={{ xl: '3xl', md: '2xl', sm: 'lg', base: 'md' }}
@@ -51,6 +53,9 @@ function App() {
             <Text>
               A third principle of Burning Man is <Text as="i">Gifting</Text>. We are proposing to create a solar-powered ice camp that gifts ice in reusable ice containers. We want to start small, creating enough ice to provide to ourselves and immediate neighbors. In the future, we can potentially scale up and provide more solar ice to the playa.
             </Text>
+          </Box>
+          <Box>
+            <Image src={solarPanels} />
           </Box>
         </VStack>
       </Box>
