@@ -1,13 +1,13 @@
 import React from 'react';
 import { Image, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
-import logo from '../sun.svg';
+import logo from '../svg/sun.svg';
 
 const spin = keyframes`
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 `;
 
-export const SpinLogo = props => {
+export const RotatingSunIcon = props => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const animation = prefersReducedMotion

@@ -15,8 +15,8 @@ import {
 import { Logo } from './components/Logo';
 import { NavBarContainer } from './components/NavbarContainer';
 import theme from './theme';
-import { SpinLogo } from './components/SpinLogo';
-import solarPanels from './solarPanels.svg';
+import { RotatingSunIcon } from './components/RotatingSunIcon';
+import solarPanels from './svg/solarPanels.svg';
 
 function App() {
   return (
@@ -46,7 +46,7 @@ function App() {
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
           <Box position="relative">
-            <SpinLogo />
+            <RotatingSunIcon />
             <Button p="24px" colorScheme="linkedin">
               Join Us
             </Button>
