@@ -39,9 +39,14 @@ function App() {
           </Heading>
           <Box position="relative">
             <RotatingSunIcon />
-            <Button p="24px" colorScheme="linkedin">
-              Join Us
-            </Button>
+            <Link
+              href="https://docs.google.com/document/d/1KHhBU1M--IhT_PZ0y-VO2CBbqPsPlvbm0KOLGytFYK4/"
+              isExternal
+            >
+              <Button p="24px" colorScheme="linkedin">
+                Join Us
+              </Button>
+            </Link>
           </Box>
           <ManifestoText />
           <Box>
