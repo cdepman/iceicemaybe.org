@@ -12,7 +12,7 @@ export const ManifestoText = () => (
       camps. Ice has not been decommodified. Ice can be purchased on playa at an
       establishment called Arctica by cash, credit card or Apple pay, but it
       really kills the decommodification vibe, has been getting more expensive,
-      and can be expensive for camps.
+      and can be a burden for camps to get every day.
     </Text>
     <br></br>
     <Text>
