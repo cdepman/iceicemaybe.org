@@ -5,32 +5,23 @@ import {
   Box,
   Text,
   VStack,
-  Flex,
   Heading,
   Image,
   Button,
   Link,
   Spacer,
 } from '@chakra-ui/react';
-import { Logo } from './components/Logo';
-import { NavBarContainer } from './components/NavbarContainer';
 import theme from './theme';
 import { RotatingSunIcon } from './components/RotatingSunIcon';
 import solarPanels from './svg/solarPanels.svg';
 import { ManifestoText } from './components/ManifestoText';
+import { NavBar } from './components/NavBar';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <NavBarContainer>
-          <Flex align="center">
-            <Logo />
-            <Heading color="blackAlpha.800" fontSize="xl" pl="4">
-              Ice Ice Maybe
-            </Heading>
-          </Flex>
-        </NavBarContainer>
+        <NavBar />
         <VStack spacing={8}>
           <Heading
             w={{
