@@ -3,7 +3,6 @@ import '@fontsource/reem-kufi';
 import {
   ChakraProvider,
   Box,
-  Text,
   VStack,
   Heading,
   Image,

@@ -19,7 +19,7 @@ export const ManifestoText = () => (
       Another principle of Burning Man is <Text as="i">Leaving No Trace</Text>.
       The ice that Arctica serves has a large environmental impact because it
       comes in disposable plastic bags and it must be trucked into the desert on
-      huge, gas-powered refrigerated trucks from Reno. Not great.
+      huge, gas-powered refrigerated trucks. Not great.
     </Text>
     <br></br>
     <Text>
