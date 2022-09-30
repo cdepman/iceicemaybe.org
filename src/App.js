@@ -44,7 +44,7 @@ function App() {
               isExternal
             >
               <Button p="24px" colorScheme="linkedin">
-                Join Us
+                Learn More
               </Button>
             </Link>
           </Box>

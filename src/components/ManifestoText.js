@@ -9,7 +9,7 @@ export const ManifestoText = () => (
       <Text as="i">Decommodification</Text> is a core principle of Burning Man.
       In 2022, Burning Man moved closer to full decommodification by removing
       coffee purchasing from Center Camp. Coffee is provided as a gift by other
-      camps. Ice has not been decommodified. Ice can be purchased on playa at an
+      camps. Ice has yet to be decommodified and can be purchased on playa at an
       establishment called Arctica by cash, credit card or Apple pay, but it
       really kills the decommodification vibe, has been getting more expensive,
       and can be a burden for camps to get every day.
