@@ -2,7 +2,7 @@ import { Box, Text, Link } from '@chakra-ui/react';
 
 export const Footer = () => (
   <Box>
-    <Text fontSize="sm">
+    <Text fontSize={{ md: 'sm', base: 'xs' }}>
       This website runs for free on Netlify and is open-source{' '}
       <Link
         target="_blank"
