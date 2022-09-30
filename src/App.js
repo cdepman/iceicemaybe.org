@@ -16,6 +16,7 @@ import { RotatingSunIcon } from './components/RotatingSunIcon';
 import solarPanels from './svg/solarPanels.svg';
 import { ManifestoText } from './components/ManifestoText';
 import { NavBar } from './components/NavBar';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -52,19 +53,8 @@ function App() {
           <Box>
             <Image src={solarPanels} />
           </Box>
-          <Box>
-            <Text fontSize="md">
-              This website runs for free on Netlify and is open-source{' '}
-              <Link
-                target="_blank"
-                color="blue.300"
-                href="https://github.com/cdepman/iceicemaybe.org"
-              >
-                here.
-              </Link>
-            </Text>
-          </Box>
-          <Spacer></Spacer>
+          <Footer />
+          <Spacer />
         </VStack>
       </Box>
     </ChakraProvider>
