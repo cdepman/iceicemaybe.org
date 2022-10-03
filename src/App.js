@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import '@fontsource/reem-kufi';
 import {
   ChakraProvider,
@@ -14,12 +14,18 @@ import { ManifestoText } from './components/ManifestoText';
 import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import { CTAButton } from './components/CTAButton';
+import { IceCascadeAnimation } from './components/IceCascadeAnimation';
 
 function App() {
+  const [pleaseMakeIce, setPleaseMakeIce] = useState(false);
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <NavBar />
+        <NavBar
+          pleaseMakeIce={pleaseMakeIce}
+          setPleaseMakeIce={setPleaseMakeIce}
+        />
+        {pleaseMakeIce && <IceCascadeAnimation />}
         <VStack spacing={8}>
           <Heading
             w={{
