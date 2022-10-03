@@ -6,16 +6,14 @@ import {
   VStack,
   Heading,
   Image,
-  Button,
-  Link,
   Spacer,
 } from '@chakra-ui/react';
 import theme from './theme';
-import { RotatingSunIcon } from './components/RotatingSunIcon';
 import solarPanels from './svg/solarPanels.svg';
 import { ManifestoText } from './components/ManifestoText';
 import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
+import { CTAButton } from './components/CTAButton';
 
 function App() {
   return (
@@ -37,17 +35,7 @@ function App() {
           >
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
-          <Box position="relative">
-            <RotatingSunIcon />
-            <Link
-              href="https://docs.google.com/document/d/1KHhBU1M--IhT_PZ0y-VO2CBbqPsPlvbm0KOLGytFYK4/"
-              isExternal
-            >
-              <Button p="24px" colorScheme="linkedin">
-                Learn More
-              </Button>
-            </Link>
-          </Box>
+          <CTAButton />
           <ManifestoText />
           <Box>
             <Image src={solarPanels} />
