@@ -9,7 +9,7 @@ const CascadeContainer = ({ children }) => (
   <Box
     zIndex="-1"
     pos="absolute"
-    marginTop="-20px"
+    marginTop="-36px"
     width="100%"
     height="100%"
     top="0"
