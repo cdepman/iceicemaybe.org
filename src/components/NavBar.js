@@ -12,6 +12,7 @@ export const NavBar = ({ pleaseMakeIce, setPleaseMakeIce }) => (
     </Flex>
     <Flex>
       <Switch
+        size="lg"
         isChecked={pleaseMakeIce}
         onChange={item => setPleaseMakeIce(item.target.checked)}
       />
