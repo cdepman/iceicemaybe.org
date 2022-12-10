@@ -1,3 +1,4 @@
+Welcome to Ice Ice Maybe's website repo! Isn't this completely over-engineered and couldn't it just be a simple HTML file?! Yes and if you'd like to make any improvements including a complete re-write please make a PR.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f3e33404-4690-460f-be93-c75f53e17b1f/deploy-status)](https://app.netlify.com/sites/incredible-cobbler-673daa/deploys)
 
@@ -47,27 +48,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

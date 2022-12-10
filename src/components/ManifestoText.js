@@ -27,10 +27,10 @@ export const ManifestoText = () => (
     <Text>
       A third principle of Burning Man is <Text as="i">Gifting</Text>. One of
       Ice Ice Maybe's major gifts at Burning Man will be ice. We want to start
-      small, creating enough ice to provide to ourselves and surrounding
-      neighbors. We can scale up and provide more solar ice to the playa in the
-      future. One vision is to have many automated solar ice vending stations
-      positioned around the residential areas of Burning Man.
+      small, creating enough ice to provide to ourselves and our surrounding
+      neighbors. In future iterations, we can scale up and provide more solar
+      ice to the playa - one vision is to build free, automated solar ice
+      vending stations positioned around the residential areas of Burning Man.
     </Text>
   </Box>
 );
