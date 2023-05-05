@@ -9,7 +9,7 @@ export const CTAButton = () => (
     <RotatingSunIcon />
     <Link href={ICE_ICE_MAYBE_MASTER_GOOGLE_DOC_URL} isExternal>
       <Button p="24px" colorScheme="linkedin">
-        Learn More
+        Get Involved
       </Button>
     </Link>
   </Box>

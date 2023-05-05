@@ -14,6 +14,7 @@ import { ManifestoText } from './components/ManifestoText';
 import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import { CTAButton } from './components/CTAButton';
+import { LinkToOurVision } from './components/LinkToOurVision';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           >
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
+          <LinkToOurVision />
           <CTAButton />
           <ManifestoText />
           <Box>
