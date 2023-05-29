@@ -57,8 +57,8 @@ export const ManifestoText = () => (
       source plans for solar ice production. We will also be gifting ice in
       various fun formats. We want to start small, creating enough ice to
       provide to ourselves and as gifts to other camps and individuals. In
-      future iterations, we can scale up and provide more ice making
-      capabilities as well as help other camps product their own. We'll one day
+      future iterations, we can scale up and streamline our ice making
+      capabilities as well as help more camps produce their own. One day we'll
       make enough ice to have a snowball fight on playa, maybe.
     </Text>
   </Box>
