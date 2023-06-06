@@ -12,9 +12,9 @@ export const ManifestoText = () => (
         </a>
       </Text>{' '}
       is a core principle of Burning Man. In 2022, Burning Man moved closer to
-      full decommodification by removing coffee purchasing from Center Camp.
-      Coffee is now provided as a gift by other camps. Ice has yet to be
-      decommodified - camps purchase it on playa at an establishment called
+      full decommodification by removing coffee purchasing from Center Camp -
+      coffee is provided as a gift by a number of camps. Ice has yet to be
+      decommodified - camps purchase it on playa from an establishment called
       Arctica by cash, Visa/Mastercard or Apple/Google pay. This kills the
       decommodification vibe and can be a burden for camps to retrieve every day
       - not to mention the price has been going up. We are proposing to
@@ -30,7 +30,7 @@ export const ManifestoText = () => (
         </a>
       </Text>{' '}
       . The ice that Arctica serves has a large environmental impact because it
-      comes in disposable plastic bags and it must be trucked into the desert on
+      comes in single-use plastic bags and it must be trucked into the desert on
       huge, gas-powered refrigerated trucks. Our open source solar ice
       production plans will enable camps to make ice on playa sustainably
       without such a high environmental impact.
