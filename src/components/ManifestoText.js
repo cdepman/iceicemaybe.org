@@ -28,7 +28,7 @@ export const ManifestoText = () => (
         <a href="https://burningman.org/about/10-principles/">
           Leaving No Trace
         </a>
-      </Text>{' '}
+      </Text>
       . The ice that Arctica serves has a large environmental impact because it
       comes in single-use plastic bags and it must be trucked into the desert on
       huge, gas-powered refrigerated trucks. Our open source solar ice
@@ -52,7 +52,7 @@ export const ManifestoText = () => (
       In the spirit of{' '}
       <Text as="u" color="#00a0dc">
         <a href="https://burningman.org/about/10-principles/">Gifting</a>
-      </Text>{' '}
+      </Text>
       , one of Ice Ice Maybe's major gifts at Burning Man will be our open
       source plans for solar ice production. We will also be gifting ice in
       various fun formats. We want to start small, creating enough ice to
