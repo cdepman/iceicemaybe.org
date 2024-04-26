@@ -106,7 +106,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
-                isExternal
+                isExternal={navItem.external}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -211,7 +211,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, href, external }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -221,7 +221,7 @@ const MobileNavItem = ({ label, children, href }) => {
         as={Link}
         href={href ?? '#'}
         justify={'space-between'}
-        isExternal
+        isExternal={external}
         align={'center'}
         _hover={{
           textDecoration: 'none',
@@ -268,6 +268,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Yearly Reports',
+    external: false,
     children: [
       {
         label: '2023',
@@ -283,6 +284,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Open Source Plans',
+    external: true,
     href: 'https://docs.google.com/presentation/d/10c6dhRPw7Wm4fZ_Hd5VRPPZENMB1cdKKAUs1QJF0Bwk/edit#slide=id.g249f672fe0c_0_71',
   },
 ];
