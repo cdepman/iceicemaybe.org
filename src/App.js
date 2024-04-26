@@ -11,10 +11,10 @@ import {
 import theme from './theme';
 import solarPanels from './svg/solarPanels.svg';
 import { ManifestoText } from './components/ManifestoText';
-import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import { CTAButton } from './components/CTAButton';
 import { LinkToOurVision } from './components/LinkToOurVision';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -32,6 +32,20 @@ function App() {
               base: '80%',
             }}
             fontSize={{ lg: '6xl', md: '4xl', sm: '3xl', base: '2xl' }}
+            pb="10px"
+          >
+            Ice Ice Maybe
+          </Heading>
+          <Heading
+            w={{
+              '2xl': '40%',
+              xl: '50%',
+              lg: '60%',
+              md: '70%',
+              sm: '80%',
+              base: '80%',
+            }}
+            fontSize={{ lg: '4xl', md: '2xl', sm: '1xl', base: 'md' }}
             pb="10px"
           >
             Let's decommodify ice <br></br> with the help of the sun.

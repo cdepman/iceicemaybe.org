@@ -15,11 +15,12 @@ export const ManifestoText = () => (
       full decommodification by removing coffee purchasing from Center Camp -
       coffee is provided as a gift by a number of camps. Ice has yet to be
       decommodified - camps purchase it on playa from an establishment called
-      Arctica by cash, Visa/Mastercard or Apple/Google pay. This kills the
-      decommodification vibe and can be a burden for camps to retrieve every day
-      - not to mention the price has been going up. We are proposing to
-      decommodify ice by making it close to the cost of water through
-      open-source solar-powered production methods.
+      Arctica by cash, Visa/Mastercard or Apple/Google pay. Such commercial
+      exchange goes directly against the principle of decommodification. Getting
+      ice can be a major burden for camps to retrieve every day - not to mention
+      the price has been going up. We are proposing to decommodify ice by making
+      it close to the cost of water through open-source solar-powered production
+      methods.
     </Text>
     <br></br>
     <Text>
