@@ -22,14 +22,15 @@ import {
 } from '@chakra-ui/icons';
 import { Logo } from './Logo';
 import { makeSomeIce } from '../util/MakeSomeIce';
+import { RotatingIceCube } from './RotatingIceCube';
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position="fixed" zIndex={2} w="100%">
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        background="white"
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
@@ -38,7 +39,6 @@ export default function NavBar() {
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}
-        mb={12}
       >
         <Flex
           flex={{ base: 1, md: 'auto' }}
@@ -67,20 +67,25 @@ export default function NavBar() {
           direction={'row'}
           spacing={6}
         >
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            onClick={makeSomeIce}
-            color={'#00A0DC'}
-            background={'white'}
-            _hover={{
-              cursor: 'pointer',
-            }}
-          >
-            Make Some Ice
-          </Button>
+          <Box position="relative">
+            <RotatingIceCube />
+            <Button
+              as={'a'}
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'md'}
+              fontWeight={600}
+              onClick={makeSomeIce}
+              color={useColorModeValue('gray.800', 'gray.200')}
+              background={'white'}
+              _hover={{
+                cursor: 'pointer',
+                color: 'black',
+              }}
+              _active={{ borderStyle: 'none' }}
+            >
+              Make Some Ice
+            </Button>
+          </Box>
         </Stack>
       </Flex>
 
@@ -92,7 +97,7 @@ export default function NavBar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkColor = useColorModeValue('gray.700', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
@@ -104,10 +109,11 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
+                display={'inline-flex'}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'md'}
                 isExternal={navItem.external}
-                fontWeight={500}
+                fontWeight={600}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
@@ -202,7 +208,7 @@ const MobileNav = () => {
         <Text
           onClick={makeSomeIce}
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color={useColorModeValue('gray.700', 'gray.200')}
         >
           Make Some Ice
         </Text>
@@ -229,7 +235,7 @@ const MobileNavItem = ({ label, children, href, external }) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
+          color={useColorModeValue('gray.800', 'gray.200')}
         >
           {label}
         </Text>

@@ -1,9 +1,10 @@
-import { Text, Box } from '@chakra-ui/react';
+import { Text, Box, useColorModeValue } from '@chakra-ui/react';
 export const ManifestoText = () => (
   <Box
     fontSize={{ xl: '3xl', md: '2xl', sm: 'lg', base: 'md' }}
     textAlign="left"
     padding="2% 10% 2% 10%"
+    color={useColorModeValue('gray.700', 'gray.200')}
   >
     <Text>
       <Text as="u" color="#00a0dc">

@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   Spacer,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import theme from './theme';
 import solarPanels from './svg/solarPanels.svg';
@@ -14,14 +15,14 @@ import { ManifestoText } from './components/ManifestoText';
 import { Footer } from './components/Footer';
 import { CTAButton } from './components/CTAButton';
 import { LinkToOurVision } from './components/LinkToOurVision';
-import NavBar from './components/NavBar';
+import WithSubnavigation from './components/NavBar';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
+      <WithSubnavigation />
       <Box textAlign="center" fontSize="xl">
-        <NavBar />
-        <VStack spacing={8}>
+        <VStack pt={28} zIndex={2} spacing={8}>
           <Heading
             w={{
               '2xl': '40%',
@@ -33,6 +34,7 @@ function App() {
             }}
             fontSize={{ lg: '6xl', md: '4xl', sm: '3xl', base: '2xl' }}
             pb="10px"
+            color={useColorModeValue('gray.700', 'gray.200')}
           >
             Ice Ice Maybe
           </Heading>
@@ -47,6 +49,7 @@ function App() {
             }}
             fontSize={{ lg: '4xl', md: '2xl', sm: '1xl', base: 'md' }}
             pb="10px"
+            color={useColorModeValue('gray.700', 'gray.200')}
           >
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
