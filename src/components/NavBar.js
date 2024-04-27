@@ -66,7 +66,7 @@ export default function NavBar() {
           direction={'row'}
           spacing={5}
         >
-          <Flex fontSize={'small'} align={'center'}>
+          <Flex fontSize={'12px'} align={'center'}>
             <Box display={{ base: 'none', md: 'flex' }}>Make Some Ice</Box>
             <ArrowForwardIcon ml={2} />
           </Flex>
