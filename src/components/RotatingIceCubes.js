@@ -2,14 +2,15 @@ import React from 'react';
 import { Flex, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
 import { makeSomeIce } from '../util/MakeSomeIce';
 
-const clockWiseSpin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`;
+const arrowIndicatorKeyframes = keyframes`
+  0%,
+  100% {
+    transform: scale(1);
+  }
 
-const counterClockWiseSpin = keyframes`
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  50% {
+    transform: scale(1.5);
+  }
 `;
 
 export const RotatingIceCubes = props => {
@@ -17,50 +18,15 @@ export const RotatingIceCubes = props => {
 
   const clockWiseAnimation = prefersReducedMotion
     ? undefined
-    : `${clockWiseSpin} infinite 12s linear`;
-
-  const counterClockWiseAnimation = prefersReducedMotion
-    ? undefined
-    : `${counterClockWiseSpin} infinite 12s linear`;
+    : `${arrowIndicatorKeyframes} infinite 3s linear`;
 
   return (
-    <Flex onClick={makeSomeIce}>
+    <Flex mr={7} onClick={makeSomeIce}>
       <Flex
-        right={0}
-        top={-2}
         zIndex="1"
+        fontSize={24}
         position="absolute"
         animation={clockWiseAnimation}
-        {...props}
-      >
-        🧊
-      </Flex>
-      <Flex
-        left={0}
-        top={-2}
-        zIndex="1"
-        position="absolute"
-        animation={counterClockWiseAnimation}
-        {...props}
-      >
-        🧊
-      </Flex>
-      <Flex
-        left={0}
-        bottom={-2}
-        zIndex="1"
-        position="absolute"
-        animation={clockWiseAnimation}
-        {...props}
-      >
-        🧊
-      </Flex>
-      <Flex
-        right={0}
-        bottom={-2}
-        zIndex="1"
-        position="absolute"
-        animation={counterClockWiseAnimation}
         {...props}
       >
         🧊

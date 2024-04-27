@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -19,6 +18,7 @@ import {
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  ArrowForwardIcon,
 } from '@chakra-ui/icons';
 import { Logo } from './Logo';
 import { makeSomeIce } from '../util/MakeSomeIce';
@@ -26,7 +26,6 @@ import { RotatingIceCubes } from './RotatingIceCubes';
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
-
   return (
     <Box position="fixed" zIndex={2} w="100%">
       <Flex
@@ -62,29 +61,17 @@ export default function NavBar() {
         </Flex>
 
         <Stack
-          flex={{ base: 1, md: 0 }}
+          flex={{ base: 1, md: 1 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}
+          spacing={5}
         >
+          <Flex fontSize={'small'} align={'center'}>
+            <Box display={{ base: 'none', md: 'flex' }}>Make Some Ice</Box>
+            <ArrowForwardIcon ml={2} />
+          </Flex>
           <Box position="relative">
-            <RotatingIceCubes display={{ base: 'none', md: 'inline-flex' }} />
-            <Button
-              as={'a'}
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'md'}
-              fontWeight={600}
-              onClick={makeSomeIce}
-              color={useColorModeValue('gray.800', 'gray.200')}
-              background={'white'}
-              _hover={{
-                color: 'black',
-                textDecoration: 'underline',
-              }}
-              _active={{ borderStyle: 'none' }}
-            >
-              Make Some Ice
-            </Button>
+            <RotatingIceCubes top={{ base: '-13px', md: '-10px' }} />
           </Box>
         </Stack>
       </Flex>

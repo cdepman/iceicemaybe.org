@@ -1,7 +1,7 @@
 import confetti from 'canvas-confetti';
 
 export const makeSomeIce = () => {
-  var duration = 5 * 1000;
+  var duration = 4 * 1000;
   var scalar = 2;
   var skew = 1;
   var ice = confetti.shapeFromText({ text: '🧊', scalar });
