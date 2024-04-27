@@ -32,22 +32,7 @@ function App() {
               sm: '80%',
               base: '80%',
             }}
-            fontSize={{ lg: '6xl', md: '4xl', sm: '3xl', base: '2xl' }}
-            pb="10px"
-            color={useColorModeValue('gray.700', 'gray.200')}
-          >
-            Ice Ice Maybe
-          </Heading>
-          <Heading
-            w={{
-              '2xl': '40%',
-              xl: '50%',
-              lg: '60%',
-              md: '70%',
-              sm: '80%',
-              base: '80%',
-            }}
-            fontSize={{ lg: '4xl', md: '2xl', sm: '1xl', base: 'md' }}
+            fontSize={{ lg: '5xl', md: '3xl', sm: '2xl', base: 'lg' }}
             pb="10px"
             color={useColorModeValue('gray.700', 'gray.200')}
           >

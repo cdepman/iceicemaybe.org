@@ -22,7 +22,7 @@ import {
 } from '@chakra-ui/icons';
 import { Logo } from './Logo';
 import { makeSomeIce } from '../util/MakeSomeIce';
-import { RotatingIceCube } from './RotatingIceCube';
+import { RotatingIceCubes } from './RotatingIceCubes';
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -68,7 +68,7 @@ export default function NavBar() {
           spacing={6}
         >
           <Box position="relative">
-            <RotatingIceCube />
+            <RotatingIceCubes display={{ base: 'none', md: 'inline-flex' }} />
             <Button
               as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}

@@ -7,6 +7,11 @@ export const ManifestoText = () => (
     color={useColorModeValue('gray.700', 'gray.200')}
   >
     <Text>
+      We're Ice Ice Maybe and we're we're harvesting sunshine to make clean ice
+      at Burning Man.
+    </Text>
+    <br></br>
+    <Text>
       <Text as="u" color="#00a0dc">
         <a href="https://burningman.org/about/10-principles/">
           Decommodification
@@ -33,7 +38,7 @@ export const ManifestoText = () => (
       </Text>
       . The ice that Arctica serves has a large environmental impact because it
       comes in single-use plastic bags and it must be trucked into the desert on
-      huge, gas-powered refrigerated trucks. Our open source solar ice
+      huge, gas-guzzling refrigerated trucks. Our open source solar ice
       production plans will enable camps to make ice on playa sustainably
       without such a high environmental impact.
     </Text>

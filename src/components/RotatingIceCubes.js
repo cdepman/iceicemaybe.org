@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flex, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
+import { makeSomeIce } from '../util/MakeSomeIce';
 
 const clockWiseSpin = keyframes`
   from { transform: rotate(0deg); }
@@ -11,7 +12,7 @@ const counterClockWiseSpin = keyframes`
   to { transform: rotate(0deg); }
 `;
 
-export const RotatingIceCube = props => {
+export const RotatingIceCubes = props => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const clockWiseAnimation = prefersReducedMotion
@@ -23,7 +24,7 @@ export const RotatingIceCube = props => {
     : `${counterClockWiseSpin} infinite 12s linear`;
 
   return (
-    <>
+    <Flex onClick={makeSomeIce}>
       <Flex
         right={0}
         top={-2}
@@ -64,6 +65,6 @@ export const RotatingIceCube = props => {
       >
         🧊
       </Flex>
-    </>
+    </Flex>
   );
 };
