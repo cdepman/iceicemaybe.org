@@ -281,7 +281,7 @@ const NAV_ITEMS = [
       {
         label: '2023',
         subLabel: '300lbs of Solar Ice',
-        href: '#',
+        href: 'https://docs.google.com/document/d/1v5CLqG7MKlwkY2MrCoq2D7YrU3C1jwpyJzqoLto2U-w/edit',
       },
       {
         label: '2024',
