@@ -8,8 +8,11 @@ export const ManifestoText = () => (
   >
     <Text>
       We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
-      Burning Man.
+      Burning Man. In 2023 we produced 300lbs of solar powered ice and open
+      sourced our plans.
     </Text>
+    <br></br>
+    <Text>Here's why we're doing this:</Text>
     <br></br>
     <Text>
       <Text as="u" color="#00a0dc">
