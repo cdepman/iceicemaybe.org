@@ -78,8 +78,8 @@ export default function NavBar() {
               color={useColorModeValue('gray.800', 'gray.200')}
               background={'white'}
               _hover={{
-                cursor: 'pointer',
                 color: 'black',
+                textDecoration: 'underline',
               }}
               _active={{ borderStyle: 'none' }}
             >
@@ -116,7 +116,7 @@ const DesktopNav = () => {
                 fontWeight={600}
                 color={linkColor}
                 _hover={{
-                  textDecoration: 'none',
+                  textDecoration: 'underline',
                   color: linkHoverColor,
                 }}
               >
@@ -157,7 +157,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       p={2}
       isExternal
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+      _hover={{
+        bg: useColorModeValue('pink.50', 'gray.900'),
+      }}
     >
       <Stack direction={'row'} align={'center'}>
         <Box>

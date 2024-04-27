@@ -22,7 +22,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <WithSubnavigation />
       <Box textAlign="center" fontSize="xl">
-        <VStack pt={28} zIndex={2} spacing={8}>
+        <VStack pt={28} spacing={8}>
           <Heading
             w={{
               '2xl': '40%',

@@ -7,8 +7,8 @@ export const ManifestoText = () => (
     color={useColorModeValue('gray.700', 'gray.200')}
   >
     <Text>
-      We're Ice Ice Maybe and we're we're harvesting sunshine to make clean ice
-      at Burning Man.
+      We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
+      Burning Man.
     </Text>
     <br></br>
     <Text>
