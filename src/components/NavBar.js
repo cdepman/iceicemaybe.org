@@ -98,9 +98,9 @@ const DesktopNav = () => {
                 p={2}
                 display={'inline-flex'}
                 href={navItem.href ?? '#'}
-                fontSize={'md'}
                 isExternal={navItem.external}
                 fontWeight={600}
+                fontSize={{ md: 'xs', lg: 'md' }}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'underline',
