@@ -9,7 +9,16 @@ export const ManifestoText = () => (
     <Text>
       We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
       Burning Man. In 2023 we produced 300 lbs of solar powered ice and open
-      sourced our plans. Watch our on-playa solar ice factory{' '}
+      sourced{' '}
+      <Text as="u" color="#00a0dc">
+        <Link
+          isExternal
+          href="https://docs.google.com/presentation/d/10c6dhRPw7Wm4fZ_Hd5VRPPZENMB1cdKKAUs1QJF0Bwk/edit#slide=id.g249f672fe0c_0_71"
+        >
+          our plans
+        </Link>
+      </Text>
+      . Watch our on-playa solar ice factory{' '}
       <Text as="u" color="#00a0dc">
         {' '}
         <Link isExternal href="https://www.youtube.com/watch?v=3S0cNhsHE9w">
