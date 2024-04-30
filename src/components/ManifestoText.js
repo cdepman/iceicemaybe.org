@@ -1,4 +1,4 @@
-import { Text, Box, useColorModeValue } from '@chakra-ui/react';
+import { Text, Box, useColorModeValue, Link } from '@chakra-ui/react';
 export const ManifestoText = () => (
   <Box
     fontSize={{ xl: '3xl', md: '2xl', sm: 'lg', base: 'md' }}
@@ -9,7 +9,23 @@ export const ManifestoText = () => (
     <Text>
       We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
       Burning Man. In 2023 we produced 300lbs of solar powered ice and open
-      sourced our plans.
+      sourced our plans. Watch our on-playa solar ice factory{' '}
+      <Text as="u" color="#00a0dc">
+        {' '}
+        <Link isExternal href="https://www.youtube.com/watch?v=3S0cNhsHE9w">
+          walthrough here
+        </Link>{' '}
+      </Text>
+      or read our 2023 end of year{' '}
+      <Text as="u" color="#00a0dc">
+        <Link
+          isExternal
+          href="https://docs.google.com/document/d/1v5CLqG7MKlwkY2MrCoq2D7YrU3C1jwpyJzqoLto2U-w/"
+        >
+          report here
+        </Link>
+      </Text>
+      .
     </Text>
     <br></br>
     <Text>Here's why we're doing this:</Text>

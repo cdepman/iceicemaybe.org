@@ -13,12 +13,12 @@ const arrowIndicatorKeyframes = keyframes`
   }
 `;
 
-export const RotatingIceCubes = props => {
+export const AnimatedIceCube = props => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const clockWiseAnimation = prefersReducedMotion
     ? undefined
-    : `${arrowIndicatorKeyframes} infinite 3s linear`;
+    : `${arrowIndicatorKeyframes} infinite 5s linear`;
 
   return (
     <Flex mr={7} onClick={makeSomeIce}>

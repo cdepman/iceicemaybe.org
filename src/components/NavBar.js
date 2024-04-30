@@ -22,7 +22,7 @@ import {
 } from '@chakra-ui/icons';
 import { Logo } from './Logo';
 import { makeSomeIce } from '../util/MakeSomeIce';
-import { RotatingIceCubes } from './RotatingIceCubes';
+import { AnimatedIceCube } from './AnimatedIceCube';
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -71,7 +71,7 @@ export default function NavBar() {
             <ArrowForwardIcon ml={2} />
           </Flex>
           <Box position="relative">
-            <RotatingIceCubes top={{ base: '-13px', md: '-10px' }} />
+            <AnimatedIceCube top={{ base: '-13px', md: '-10px' }} />
           </Box>
         </Stack>
       </Flex>
@@ -266,14 +266,14 @@ const NAV_ITEMS = [
     external: false,
     children: [
       {
-        label: '2023',
-        subLabel: '300lbs of Solar Ice',
-        href: 'https://docs.google.com/document/d/1v5CLqG7MKlwkY2MrCoq2D7YrU3C1jwpyJzqoLto2U-w/edit',
+        label: '2023 Video Walkthrough',
+        subLabel: 'First ice',
+        href: 'https://www.youtube.com/watch?v=3S0cNhsHE9w',
       },
       {
-        label: '2024',
-        subLabel: '???',
-        href: '#',
+        label: '2023 Writeup',
+        subLabel: '300 lbs made!',
+        href: 'https://docs.google.com/document/d/1v5CLqG7MKlwkY2MrCoq2D7YrU3C1jwpyJzqoLto2U-w/edit',
       },
     ],
   },
