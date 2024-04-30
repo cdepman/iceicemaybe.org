@@ -8,7 +8,7 @@ export const ManifestoText = () => (
   >
     <Text>
       We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
-      Burning Man. In 2023 we produced 300lbs of solar powered ice and open
+      Burning Man. In 2023 we produced 300 lbs of solar powered ice and open
       sourced our plans. Watch our on-playa solar ice factory{' '}
       <Text as="u" color="#00a0dc">
         {' '}
