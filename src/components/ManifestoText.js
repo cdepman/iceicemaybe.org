@@ -22,7 +22,7 @@ export const ManifestoText = () => (
       <Text as="u" color="#00a0dc">
         {' '}
         <Link isExternal href="https://www.youtube.com/watch?v=3S0cNhsHE9w">
-          walthrough here
+          walkthrough here
         </Link>{' '}
       </Text>
       or read our 2023 end of year{' '}
