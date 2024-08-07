@@ -14,7 +14,6 @@ import solarPanels from './svg/solarPanels.svg';
 import { ManifestoText } from './components/ManifestoText';
 import { Footer } from './components/Footer';
 import { CTAButton } from './components/CTAButton';
-import { LinkToOurVision } from './components/LinkToOurVision';
 import WithSubnavigation from './components/NavBar';
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
           >
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
-          <LinkToOurVision />
           <CTAButton />
           <ManifestoText />
           <Box>

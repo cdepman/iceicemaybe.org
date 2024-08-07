@@ -3,8 +3,8 @@ export const LinkToOurVision = () => (
   <Link
     textDecoration="underline"
     color="#00a0dc"
-    href="https://www.wordsfromthefuture.org/p/visiting-ice-ice-maybe"
+    href="https://givebutter.com/ice-ice-maybe-founders-fund"
   >
-    Read our long-term vision here!
+    Contribute here!
   </Link>
 );
