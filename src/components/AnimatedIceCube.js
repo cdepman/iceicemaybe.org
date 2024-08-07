@@ -1,6 +1,5 @@
 import React from 'react';
 import { Flex, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
-import { makeSomeIce } from '../util/MakeSomeIce';
 
 const arrowIndicatorKeyframes = keyframes`
   0%,
@@ -21,7 +20,7 @@ export const AnimatedIceCube = props => {
     : `${arrowIndicatorKeyframes} infinite 5s linear`;
 
   return (
-    <Flex mr={7} onClick={makeSomeIce}>
+    <Flex mr={7}>
       <Flex
         zIndex="1"
         fontSize={24}

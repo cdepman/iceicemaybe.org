@@ -59,20 +59,21 @@ export default function NavBar() {
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 1 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={5}
-        >
-          <Flex fontSize={'12px'} align={'center'}>
-            <Box display={{ base: 'none', md: 'flex' }}>Make Some Ice</Box>
-            <ArrowForwardIcon ml={2} />
+        <Stack flex={{ base: 1, md: 1 }}>
+          <Flex
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={5}
+            onClick={makeSomeIce}
+          >
+            <Flex cursor="pointer" fontSize={'12px'} align={'center'}>
+              <Box display={{ base: 'none', md: 'flex' }}>Make Some Ice</Box>
+              <ArrowForwardIcon ml={2} mr={2} />
+            </Flex>
+            <Box cursor="pointer" position="relative">
+              <AnimatedIceCube top={{ base: '-13px', md: '-10px' }} />
+            </Box>
           </Flex>
-          <Box position="relative">
-            <AnimatedIceCube top={{ base: '-13px', md: '-10px' }} />
-          </Box>
         </Stack>
       </Flex>
 
