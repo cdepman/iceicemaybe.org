@@ -612,23 +612,9 @@ export const OffGridIceRig = () => {
                   <span style={{ color: FROST }}>Ice</span> Rig
                 </h1>
                 <p style={{ maxWidth: '46ch', margin: '22px 0 0', color: INK, fontSize: 'clamp(1.02rem,2vw,1.18rem)', lineHeight: 1.55 }}>
-                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you already have.{' '}
-                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the fittings</span> — so this guide gets the threads exact.
+                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you already have (renewable like solar preferred!).{' '}
+                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span> — so this guide gets the threads exact.
                 </p>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, marginTop: '34px', border: `1px solid ${HAIR}`, borderRadius: '12px', overflow: 'hidden' }}>
-                  {[
-                    ['Source', 'Reservoir', INK],
-                    ['Core', 'SEAFLO pump', WARM],
-                    ['Output', 'Ice maker', INK],
-                    ['Power', 'Solar + battery', INK],
-                  ].map(([k, v, color], i) => (
-                    <div key={k} style={{ padding: '14px 16px', borderRight: i < 3 ? `1px solid ${HAIR}` : 'none' }}>
-                      <div style={{ fontFamily: MONO, fontSize: '.6rem', letterSpacing: '.18em', textTransform: 'uppercase', color: MUTED }}>{k}</div>
-                      <div style={{ fontFamily: ARCHIVO, fontWeight: 700, fontSize: '.95rem', marginTop: '5px', color }}>{v}</div>
-                    </div>
-                  ))}
-                </div>
               </div>
 
               {/* Fig. 01 */}
@@ -640,7 +626,6 @@ export const OffGridIceRig = () => {
 
             {/* section dots */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '11px', marginTop: '46px' }}>
-              <span style={{ fontFamily: MONO, fontSize: '.62rem', letterSpacing: '.16em', textTransform: 'uppercase', color: MUTED, marginRight: '4px' }}>Jump to</span>
               {SECTIONS.map(([id, label]) => {
                 const on = active === id;
                 return (
@@ -678,8 +663,8 @@ export const OffGridIceRig = () => {
             <SectionTag>01 / Parts</SectionTag>
             <h2 style={h2Style}>What to buy</h2>
             <p style={{ ...leadStyle, maxWidth: '60ch' }}>
-              Two groups. <strong style={{ color: INK, fontWeight: 600 }}>Devices</strong> are the boxes that do the work.{' '}
-              <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them — and where almost every failed build goes wrong.
+              Two groups.{' '} We do not get any affiliate benefits from the links and those are just the pieces of hardware we did the proof-of-concept at Burning Man with. Other ice machines etc. should work well too.{' '}
+              <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and where almost every failed build goes wrong.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '42px 0 18px' }}>
