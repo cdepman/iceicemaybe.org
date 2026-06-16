@@ -1,5 +1,5 @@
-import React from 'react';
-import { Flex, keyframes, usePrefersReducedMotion } from '@chakra-ui/react';
+import { Flex, usePrefersReducedMotion } from '@chakra-ui/react';
+import { keyframes } from '@emotion/react';
 
 const arrowIndicatorKeyframes = keyframes`
   0%,

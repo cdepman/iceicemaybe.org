@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image } from '@chakra-ui/react';
 import logo from '../img/ice-ice-maybe-small.png';
 

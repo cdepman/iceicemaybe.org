@@ -20,6 +20,7 @@ import {
   ChevronRightIcon,
   ArrowForwardIcon,
 } from '@chakra-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
 import { Logo } from './Logo';
 import { makeSomeIce } from '../util/MakeSomeIce';
 import { AnimatedIceCube } from './AnimatedIceCube';
@@ -98,8 +99,9 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 display={'inline-flex'}
-                href={navItem.href ?? '#'}
-                isExternal={navItem.external}
+                {...(navItem.internal
+                  ? { as: RouterLink, to: navItem.href }
+                  : { href: navItem.href ?? '#', isExternal: navItem.external })}
                 fontWeight={600}
                 fontSize={{ md: 'xs', lg: 'md' }}
                 color={linkColor}
@@ -207,17 +209,19 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href, external }) => {
+const MobileNavItem = ({ label, children, href, external, internal }) => {
   const { isOpen, onToggle } = useDisclosure();
+
+  const linkProps = internal
+    ? { as: RouterLink, to: href }
+    : { as: Link, href: href ?? '#', isExternal: external };
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
         py={2}
-        as={Link}
-        href={href ?? '#'}
+        {...linkProps}
         justify={'space-between'}
-        isExternal={external}
         align={'center'}
         _hover={{
           textDecoration: 'none',
@@ -262,6 +266,11 @@ const MobileNavItem = ({ label, children, href, external }) => {
 };
 
 const NAV_ITEMS = [
+  {
+    label: 'Off-Grid Ice Rig',
+    internal: true,
+    href: '/off-grid-ice-rig',
+  },
   {
     label: 'Yearly Reports',
     external: false,

@@ -1,4 +1,3 @@
-import React from 'react';
 import '@fontsource/reem-kufi';
 import {
   ChakraProvider,
@@ -9,14 +8,16 @@ import {
   Spacer,
   useColorModeValue,
 } from '@chakra-ui/react';
-import theme from './theme';
-import solarPanels from './svg/solarPanels.svg';
-import { ManifestoText } from './components/ManifestoText';
-import { Footer } from './components/Footer';
-import { CTAButton } from './components/CTAButton';
-import WithSubnavigation from './components/NavBar';
+import theme from '../theme';
+import solarPanels from '../svg/solarPanels.svg';
+import { ManifestoText } from '../components/ManifestoText';
+import { Footer } from '../components/Footer';
+import { CTAButton } from '../components/CTAButton';
+import { LinkToBuildManual } from '../components/LinkToBuildManual';
+import WithSubnavigation from '../components/NavBar';
 
-function App() {
+export const Home = () => {
+  const headingColor = useColorModeValue('gray.700', 'gray.200');
   return (
     <ChakraProvider theme={theme}>
       <WithSubnavigation />
@@ -33,11 +34,12 @@ function App() {
             }}
             fontSize={{ lg: '5xl', md: '3xl', sm: '2xl', base: 'lg' }}
             pb="10px"
-            color={useColorModeValue('gray.700', 'gray.200')}
+            color={headingColor}
           >
             Let's decommodify ice <br></br> with the help of the sun.
           </Heading>
           <CTAButton />
+          <LinkToBuildManual />
           <ManifestoText />
           <Box>
             <Image src={solarPanels} />
@@ -48,6 +50,4 @@ function App() {
       </Box>
     </ChakraProvider>
   );
-}
-
-export default App;
+};

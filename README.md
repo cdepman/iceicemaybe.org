@@ -4,31 +4,35 @@ Welcome to Ice Ice Maybe's website repo! Isn't it completely over-engineered and
 
 Deployed on Netlify: [https://www.iceicemaybe.org](https://www.iceicemaybe.org)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with [Vite](https://vite.dev/), [React](https://react.dev/), [Chakra UI](https://chakra-ui.com/), and [React Router](https://reactrouter.com/).
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+Requires Node 18+ and npm.
 
-### `npm start`
+```sh
+npm install
+npm run dev
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then open [http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Pages
 
-### `npm test`
+- `/` — the landing page.
+- `/off-grid-ice-rig` — the Off-Grid Ice Rig field build manual (`src/pages/OffGridIceRig.jsx`).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scripts
 
-### `npm run build`
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server with hot reload (also aliased as `npm start`). |
+| `npm run build` | Build the production bundle to `build/`. |
+| `npm run preview` | Serve the production build locally. |
+| `npm test` | Run the test suite once (Vitest). `npm run test:watch` for watch mode. |
+| `npm run lint` | Lint with ESLint. |
+| `npm run format` | Format with Prettier. |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Netlify builds with `npm run build` and publishes `build/` (see `netlify.toml`). Client-side routes fall back to `index.html`.
