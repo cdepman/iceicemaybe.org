@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/write-route-meta.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

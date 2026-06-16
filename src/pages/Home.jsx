@@ -15,11 +15,19 @@ import { Footer } from '../components/Footer';
 import { CTAButton } from '../components/CTAButton';
 import { LinkToBuildManual } from '../components/LinkToBuildManual';
 import WithSubnavigation from '../components/NavBar';
+import { PageMeta } from '../components/PageMeta';
 
 export const Home = () => {
   const headingColor = useColorModeValue('gray.700', 'gray.200');
   return (
     <ChakraProvider theme={theme}>
+      <PageMeta
+        title="Ice Ice Maybe | Decommodified Solar Ice"
+        description="Decommodified solar ice for Burning Man, built around open-source tools and camp-scale collaboration."
+        path="/"
+        image="/IceIceMaybeImage.png"
+        imageAlt="Ice Ice Maybe solar ice project"
+      />
       <WithSubnavigation />
       <Box textAlign="center" fontSize="xl">
         <VStack pt={28} spacing={8}>

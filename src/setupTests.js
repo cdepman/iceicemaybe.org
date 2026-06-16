@@ -16,3 +16,11 @@ if (!window.matchMedia) {
     dispatchEvent: () => false,
   });
 }
+
+if (!window.IntersectionObserver) {
+  window.IntersectionObserver = class IntersectionObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  };
+}

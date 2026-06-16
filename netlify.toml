@@ -9,6 +9,11 @@
 # Existing static files (e.g. /off-grid-ice-rig/IMG_7184.jpeg) are served
 # directly and are not affected by this rule.
 [[redirects]]
+  from = "/off-grid-ice-rig"
+  to = "/off-grid-ice-rig/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

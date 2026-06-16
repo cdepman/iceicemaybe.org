@@ -1,4 +1,5 @@
-import { screen } from '@testing-library/react';
+import { render as rtlRender, screen, waitFor } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { render } from './test-utils';
 import App from './App';
 
@@ -14,4 +15,29 @@ test('links to the off-grid ice rig manual', () => {
   const links = screen.getAllByRole('link', { name: /off-grid ice rig/i });
   expect(links.length).toBeGreaterThan(0);
   expect(links[0]).toHaveAttribute('href', '/off-grid-ice-rig');
+});
+
+test('sets share metadata for the off-grid ice rig manual', async () => {
+  rtlRender(
+    <MemoryRouter initialEntries={['/off-grid-ice-rig']}>
+      <App />
+    </MemoryRouter>
+  );
+
+  await waitFor(() => {
+    expect(document.title).toBe(
+      'Off-Grid Ice Rig Build Manual | Ice Ice Maybe'
+    );
+  });
+
+  expect(
+    document.head
+      .querySelector('meta[property="og:image"]')
+      ?.getAttribute('content')
+  ).toBe('https://www.iceicemaybe.org/off-grid-ice-rig/og-image.jpg');
+  expect(
+    document.head
+      .querySelector('meta[name="description"]')
+      ?.getAttribute('content')
+  ).toMatch(/Open-source field manual/);
 });

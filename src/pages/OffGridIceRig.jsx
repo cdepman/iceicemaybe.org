@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { PageMeta } from '../components/PageMeta';
 
 /*
  * Off-Grid Ice Rig — Field Build Manual.
@@ -469,6 +470,14 @@ export const OffGridIceRig = () => {
 
   return (
     <div className="ogir-root" style={rootStyle}>
+      <PageMeta
+        title="Off-Grid Ice Rig Build Manual | Ice Ice Maybe"
+        description="Open-source field manual for building an off-grid ice rig with a reservoir, pump, plumbing fittings, and portable ice maker."
+        path="/off-grid-ice-rig"
+        image="/off-grid-ice-rig/og-image.jpg"
+        imageAlt="Off-grid ice rig with reservoir, pump, plumbing, and portable ice maker"
+        type="article"
+      />
       <style>{PAGE_CSS}</style>
 
       {/* grid blueprint overlay */}
