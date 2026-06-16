@@ -29,14 +29,14 @@ const BOOKING_URL = 'https://calendar.app.google/J8LeRMqDA4Yqrioy7';
 const SECTIONS = [
   ['overview', 'Overview'],
   ['parts', 'Parts'],
-  ['path', 'Water Path'],
+  ['path', 'Plumbing'],
   ['assembly', 'Assembly'],
-  ['notes', 'Field Notes'],
+  ['notes', 'Notes'],
 ];
 
 const MOVES = [
   { n: '01', t: 'Parts', d: 'Buy the devices and the fittings that join them.', href: '#parts' },
-  { n: '02', t: 'Plan', d: 'Trace the water path, fitting by fitting.', href: '#path' },
+  { n: '02', t: 'Plan', d: 'Trace the plumbing, fitting by fitting.', href: '#path' },
   { n: '03', t: 'Build', d: 'Plumb and wire the rig in order.', href: '#assembly' },
   { n: '04', t: 'Tune', d: 'Dodge the six classic field mistakes.', href: '#notes' },
 ];
@@ -251,8 +251,9 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){.ogir-root [data-drop]{animation:none!important;top:42%!important}}
 @media (max-width:760px){
   .ogir-hero-grid{grid-template-columns:1fr!important;gap:28px!important}
-  .ogir-nav-bar{flex-direction:column;align-items:flex-start!important;height:auto!important;padding-top:10px!important;padding-bottom:10px!important;gap:10px!important}
+  .ogir-nav-bar{position:relative!important;flex-direction:column;align-items:flex-start!important;height:auto!important;padding-top:10px!important;padding-bottom:10px!important;gap:10px!important}
   .ogir-nav-links{flex-wrap:wrap!important;overflow:visible!important;margin-left:0!important;width:100%;gap:12px 18px!important}
+  .ogir-home-link{position:absolute!important;top:16px!important;right:24px!important;font-size:.72rem!important;padding:6px 11px!important;border-radius:7px!important}
   .ogir-steps-grid{grid-template-columns:repeat(2,1fr)!important}
 }
 `;
@@ -517,8 +518,8 @@ export const OffGridIceRig = () => {
             zIndex: 50,
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
-            background: 'rgba(247,250,252,.92)',
-            borderBottom: `1px solid color-mix(in oklab,${FIELD} 20%,transparent)`,
+            background: `color-mix(in oklab,${FIELD} 32%,#ffffff)`,
+            borderBottom: `1px solid color-mix(in oklab,${FIELD} 30%,transparent)`,
           }}
         >
           <div
@@ -530,7 +531,7 @@ export const OffGridIceRig = () => {
               title="Back to iceicemaybe.org"
               style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
             >
-              <img src="/ice-ice-maybe-small.png" alt="Ice Ice Maybe" style={{ height: '32px', width: 'auto', display: 'block' }} />
+              <img src="/ice-ice-maybe-small.png" alt="Ice Ice Maybe" style={{ height: '38px', width: 'auto', display: 'block', transform: 'translateY(4px)' }} />
             </RouterLink>
             <div
               className="ogir-nav-links"
@@ -576,6 +577,7 @@ export const OffGridIceRig = () => {
             </div>
             <RouterLink
               to="/"
+              className="ogir-home-link"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -777,10 +779,10 @@ export const OffGridIceRig = () => {
           </div>
         </section>
 
-        {/* 02 WATER PATH */}
+        {/* 02 PLUMBING */}
         <section id="path" style={SECTION}>
           <div style={CONTAINER}>
-            <SectionTag>02 / Water path</SectionTag>
+            <SectionTag>02 / Plumbing</SectionTag>
             <h2 style={h2Style}>Reservoir to ice, fitting by fitting</h2>
             <p style={{ ...leadStyle, maxWidth: '62ch' }}>
               Follow the line top to bottom. Each blue node is a device; each pale node is a fitting you buy. The pump in the middle sets the one rule that governs everything around it.
@@ -808,7 +810,7 @@ export const OffGridIceRig = () => {
             <SectionTag>03 / Assembly</SectionTag>
             <h2 style={h2Style}>Build order</h2>
             <p style={{ ...leadStyle, maxWidth: '62ch' }}>
-              Plumb the water path first and prove it on a wall outlet. Move to solar only once it holds pressure without leaks.{' '}
+              Plumb the rig first and prove it on a wall outlet. Move to solar only once it holds pressure without leaks.{' '}
               <span style={{ color: FROST }}>Tap a step to check it off</span> — your progress is saved.
             </p>
 
