@@ -214,7 +214,7 @@ const FLOW = [
 const CONTAINER = { maxWidth: '1120px', margin: '0 auto', padding: '0 24px' };
 const SECTION = {
   scrollMarginTop: '72px',
-  padding: '88px 0',
+  padding: 'clamp(48px,7vw,88px) 0',
   borderTop: `1px solid ${HAIR2}`,
 };
 const tagStyle = {
@@ -622,21 +622,6 @@ export const OffGridIceRig = () => {
                 <span style={{ position: 'absolute', top: '14px', left: '14px', zIndex: 1, fontFamily: MONO, fontSize: '.62rem', letterSpacing: '.16em', textTransform: 'uppercase', color: FROST, background: 'rgba(11,18,38,.55)', padding: '3px 7px', borderRadius: '5px' }}>Fig. 01</span>
                 <img src="/off-grid-ice-rig/IMG_7184.jpeg" alt="Assembled off-grid ice rig" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
-            </div>
-
-            {/* section dots */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '11px', marginTop: '46px' }}>
-              {SECTIONS.map(([id, label]) => {
-                const on = active === id;
-                return (
-                  <a
-                    key={id}
-                    href={`#${id}`}
-                    aria-label={label}
-                    style={{ width: '11px', height: '11px', borderRadius: '50%', boxSizing: 'border-box', border: `1.5px solid ${FROST}`, background: on ? FROST : 'transparent', transition: 'background .2s ease', display: 'block' }}
-                  />
-                );
-              })}
             </div>
           </div>
 
