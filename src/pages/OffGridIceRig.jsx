@@ -514,7 +514,7 @@ export const OffGridIceRig = () => {
               flexWrap: 'wrap',
             }}
           >
-            <span>Off-Grid Ice &nbsp;/&nbsp; Open-Source</span>
+            <span>Off-Grid &nbsp;/&nbsp; Open-Source</span>
             <span style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
               <span style={{ color: FROST }}>/</span> v1.0 &nbsp;/&nbsp; 2026
             </span>
