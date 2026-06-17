@@ -250,7 +250,7 @@ const UtilityBar = ({ border = 'bottom' }) => (
         ...CONTAINER,
         padding: '9px 24px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         gap: '14px',
         fontFamily: MONO,
@@ -261,10 +261,7 @@ const UtilityBar = ({ border = 'bottom' }) => (
         flexWrap: 'wrap',
       }}
     >
-      <span>Off-Grid &nbsp;/&nbsp; Open-Source</span>
-      <span style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
-        <span style={{ color: FROST }}>/</span> v1.0 &nbsp;/&nbsp; 2026
-      </span>
+      <span>Off-Grid &nbsp;/&nbsp; Open-Source &nbsp;/&nbsp; v1.0 &nbsp;/&nbsp; 2026</span>
     </div>
   </div>
 );
