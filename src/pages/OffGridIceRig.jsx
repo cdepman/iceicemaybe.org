@@ -27,8 +27,10 @@ const ARCHIVO = "'Archivo',sans-serif";
 const BOOKING_URL = 'https://calendar.app.google/J8LeRMqDA4Yqrioy7';
 
 // --- content -----------------------------------------------------------------
+// `overview` is the hero the user already lands on, so it's intentionally not a
+// jump target — no nav tab and no "Jump to" dot. While in the hero, no tab is
+// highlighted; the first real section activates as you scroll down.
 const SECTIONS = [
-  ['overview', 'Overview'],
   ['parts', 'Parts'],
   ['path', 'Plumbing'],
   ['assembly', 'Assembly'],
@@ -512,39 +514,69 @@ export const OffGridIceRig = () => {
               flexWrap: 'wrap',
             }}
           >
-            <span>Off-Grid Ice &nbsp;/&nbsp; Open-Source Build</span>
+            <span>Off-Grid Ice &nbsp;/&nbsp; Open-Source</span>
             <span style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
-              <span style={{ color: FROST }}>●</span> Manual v1.0 &nbsp;/&nbsp; 2026
+              <span style={{ color: FROST }}>/</span> v1.0 &nbsp;/&nbsp; 2026
             </span>
           </div>
         </div>
 
         {/* sticky nav */}
-        <nav
-          style={{
-            position: 'sticky',
-            top: 0,
-            zIndex: 50,
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            background: `color-mix(in oklab,${FIELD} 32%,#ffffff)`,
-            borderBottom: `1px solid color-mix(in oklab,${FIELD} 30%,transparent)`,
-          }}
-        >
+        <nav style={{ position: 'sticky', top: 0, zIndex: 50 }}>
+          {/* light strip: logo + back to home */}
           <div
-            className="ogir-nav-bar"
-            style={{ ...CONTAINER, display: 'flex', alignItems: 'center', gap: '18px', height: '64px' }}
+            style={{
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              background: `color-mix(in oklab,${FIELD} 32%,#ffffff)`,
+            }}
           >
-            <RouterLink
-              to="/"
-              title="Back to iceicemaybe.org"
-              style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
+            <div
+              className="ogir-nav-bar"
+              style={{ ...CONTAINER, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '18px', height: '64px' }}
             >
-              <img src="/ice-ice-maybe-small.png" alt="Ice Ice Maybe" style={{ height: '38px', width: 'auto', display: 'block', transform: 'translateY(4px)' }} />
-            </RouterLink>
+              <RouterLink
+                to="/"
+                title="Back to iceicemaybe.org"
+                style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
+              >
+                <img src="/ice-ice-maybe-small.png" alt="Ice Ice Maybe" style={{ height: '38px', width: 'auto', display: 'block', transform: 'translateY(4px)' }} />
+              </RouterLink>
+              <RouterLink
+                to="/"
+                className="ogir-home-link"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  background: FIELD,
+                  color: '#fff',
+                  fontFamily: ARCHIVO,
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  padding: '9px 16px',
+                  borderRadius: '8px',
+                  fontSize: '.82rem',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                ← iceicemaybe.org
+              </RouterLink>
+            </div>
+          </div>
+
+          {/* dark band: section jump links, white with white underlines */}
+          <div
+            style={{
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              background: `color-mix(in oklab,${FIELD} 90%,transparent)`,
+              borderBottom: `1px solid ${HAIR}`,
+            }}
+          >
             <div
               className="ogir-nav-links"
-              style={{ display: 'flex', gap: '22px', alignItems: 'center', marginLeft: '6px', flex: 1, overflowX: 'auto', scrollbarWidth: 'none' }}
+              style={{ ...CONTAINER, display: 'flex', gap: '26px', alignItems: 'center', height: '48px', overflowX: 'auto', scrollbarWidth: 'none' }}
             >
               {SECTIONS.map(([id, label]) => {
                 const on = active === id;
@@ -555,7 +587,7 @@ export const OffGridIceRig = () => {
                     style={{
                       position: 'relative',
                       textDecoration: 'none',
-                      color: FIELD,
+                      color: '#fff',
                       fontFamily: MONO,
                       fontSize: '.72rem',
                       letterSpacing: '.14em',
@@ -563,7 +595,7 @@ export const OffGridIceRig = () => {
                       padding: '6px 1px',
                       whiteSpace: 'nowrap',
                       fontWeight: on ? 600 : 500,
-                      opacity: on ? 1 : 0.6,
+                      opacity: on ? 1 : 0.8,
                     }}
                   >
                     {label}
@@ -574,7 +606,7 @@ export const OffGridIceRig = () => {
                         right: '1px',
                         bottom: '-2px',
                         height: '2px',
-                        background: FIELD,
+                        background: '#fff',
                         transformOrigin: 'left',
                         transform: on ? 'scaleX(1)' : 'scaleX(0)',
                         transition: 'transform .25s ease',
@@ -584,26 +616,6 @@ export const OffGridIceRig = () => {
                 );
               })}
             </div>
-            <RouterLink
-              to="/"
-              className="ogir-home-link"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '7px',
-                background: FIELD,
-                color: '#fff',
-                fontFamily: ARCHIVO,
-                fontWeight: 700,
-                textDecoration: 'none',
-                padding: '9px 16px',
-                borderRadius: '8px',
-                fontSize: '.82rem',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              ← iceicemaybe.org
-            </RouterLink>
           </div>
         </nav>
 
