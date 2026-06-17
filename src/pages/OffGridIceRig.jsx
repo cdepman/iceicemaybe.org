@@ -24,8 +24,6 @@ const HAIR2 = 'rgba(255,255,255,.08)';
 const MONO = "'IBM Plex Mono',monospace";
 const ARCHIVO = "'Archivo',sans-serif";
 
-const BOOKING_URL = 'https://calendar.app.google/J8LeRMqDA4Yqrioy7';
-
 // --- content -----------------------------------------------------------------
 // `overview` is the hero the user already lands on, so it's intentionally not a
 // jump target — no nav tab and no "Jump to" dot. While in the hero, no tab is
@@ -244,6 +242,32 @@ const h2Style = {
 const leadStyle = { margin: '14px 0 0', color: MUTED, fontSize: '1.05rem' };
 
 const SectionTag = ({ children }) => <span style={tagStyle}>{children}</span>;
+
+const UtilityBar = ({ border = 'bottom' }) => (
+  <div style={{ [border === 'top' ? 'borderTop' : 'borderBottom']: `1px solid ${HAIR2}` }}>
+    <div
+      style={{
+        ...CONTAINER,
+        padding: '9px 24px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: '14px',
+        fontFamily: MONO,
+        fontSize: '.66rem',
+        letterSpacing: '.18em',
+        textTransform: 'uppercase',
+        color: MUTED,
+        flexWrap: 'wrap',
+      }}
+    >
+      <span>Off-Grid &nbsp;/&nbsp; Open-Source</span>
+      <span style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
+        <span style={{ color: FROST }}>/</span> v1.0 &nbsp;/&nbsp; 2026
+      </span>
+    </div>
+  </div>
+);
 
 const PAGE_CSS = `
 html,body{margin:0}
@@ -496,30 +520,7 @@ export const OffGridIceRig = () => {
       />
 
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* utility bar */}
-        <div style={{ borderBottom: `1px solid ${HAIR2}` }}>
-          <div
-            style={{
-              ...CONTAINER,
-              padding: '9px 24px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              gap: '14px',
-              fontFamily: MONO,
-              fontSize: '.66rem',
-              letterSpacing: '.18em',
-              textTransform: 'uppercase',
-              color: MUTED,
-              flexWrap: 'wrap',
-            }}
-          >
-            <span>Off-Grid &nbsp;/&nbsp; Open-Source</span>
-            <span style={{ display: 'flex', gap: '18px', alignItems: 'center' }}>
-              <span style={{ color: FROST }}>/</span> v1.0 &nbsp;/&nbsp; 2026
-            </span>
-          </div>
-        </div>
+        <UtilityBar />
 
         {/* sticky nav */}
         <nav style={{ position: 'sticky', top: 0, zIndex: 50 }}>
@@ -851,19 +852,7 @@ export const OffGridIceRig = () => {
           </div>
         </section>
 
-        {/* footer */}
-        <footer style={{ borderTop: `1px solid ${HAIR}`, background: `color-mix(in oklab,${FIELD} 70%,#06123a)`, padding: '60px 0' }}>
-          <div style={{ ...CONTAINER, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontFamily: MONO, fontSize: '.66rem', letterSpacing: '.14em', textTransform: 'uppercase', color: MUTED, opacity: 0.8 }}>
-              <span style={{ fontSize: '.9rem' }}>🧊🧊</span>{' '}
-              <RouterLink to="/" style={{ color: FROST, textDecoration: 'none' }}>Ice Ice Maybe</RouterLink>
-              &nbsp;/&nbsp; Open-Source Build &nbsp;/&nbsp; Off-Grid Ice
-            </div>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" style={{ fontFamily: MONO, fontSize: '.66rem', letterSpacing: '.14em', textTransform: 'uppercase', color: FROST, textDecoration: 'none', border: `1px solid ${HAIR}`, borderRadius: '8px', padding: '9px 14px' }}>
-              Book build time →
-            </a>
-          </div>
-        </footer>
+        <UtilityBar border="top" />
       </div>
     </div>
   );
