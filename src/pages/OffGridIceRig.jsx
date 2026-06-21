@@ -39,7 +39,7 @@ const MOVES = [
   { n: '01', t: 'Parts', d: 'Buy the devices and the fittings that join them.', href: '#parts' },
   { n: '02', t: 'Plan', d: 'Trace the plumbing, fitting by fitting.', href: '#path' },
   { n: '03', t: 'Build', d: 'Plumb and wire the rig in order.', href: '#assembly' },
-  { n: '04', t: 'Tune', d: 'Dodge the six classic field mistakes.', href: '#notes' },
+  { n: '04', t: 'Tune', d: 'Nail the six details that make the build run.', href: '#notes' },
 ];
 
 const DEVICES = [
@@ -108,9 +108,9 @@ const STEPS = [
 ];
 
 const NOTES = [
-  { k: 'A', t: 'Thread gender, every time', b: 'Pump ports are male, so every fitting that screws on is female. This one rule prevents most leaks.' },
+  { k: 'A', t: 'Thread gender, every time', b: 'Pump ports are male, so every fitting that screws on is female. Get this one rule right and the joints seal.' },
   { k: 'B', t: 'Tape pipe threads only', b: 'PTFE tape on tapered NPT joints. Hose thread (FHT) seals on a gasket and needs none.' },
-  { k: 'C', t: 'Match barb to hose ID', b: 'Size the barb to the inner diameter of the hose, not the outer, or the clamp will never seal.' },
+  { k: 'C', t: 'Match barb to hose ID', b: 'Size the barb to the inner diameter of the hose, not the outer, so the clamp seals tight.' },
   { k: 'D', t: 'Square-cut the 1/4" tube', b: 'Push-to-connect fittings need a clean, deburred, square end to seat and hold pressure.' },
   { k: 'E', t: 'Give the condenser air', b: 'Portable ice makers dump heat out the back. Leave clearance and brush dust off the coils or output drops.' },
   { k: 'F', t: 'Shade the reservoir', b: 'Sun-warmed feed water freezes slower and makes softer cubes. Keep the tank shaded or insulated.' },
@@ -462,8 +462,7 @@ export const OffGridIceRig = () => {
   };
 
   let done = 0;
-  for (const k in checked) if (checked[k]) done += 1;
-  if (done > STEPS.length) done = STEPS.length;
+  for (let i = 0; i < STEPS.length; i += 1) if (checked[i]) done += 1;
 
   const isCards = view === 'cards';
 
@@ -483,7 +482,7 @@ export const OffGridIceRig = () => {
   const rootStyle = {
     position: 'relative',
     minHeight: '100vh',
-    background: `linear-gradient(180deg,${FIELD},color-mix(in oklab,${FIELD} 74%,#06123a))`,
+    background: `linear-gradient(180deg,${FIELD},#1638A4)`,
     color: INK,
     fontFamily: '"IBM Plex Sans",system-ui,sans-serif',
     fontSize: '17px',
@@ -526,7 +525,7 @@ export const OffGridIceRig = () => {
             style={{
               backdropFilter: 'blur(10px)',
               WebkitBackdropFilter: 'blur(10px)',
-              background: `color-mix(in oklab,${FIELD} 32%,#ffffff)`,
+              background: '#B6C4EE',
             }}
           >
             <div
@@ -568,7 +567,7 @@ export const OffGridIceRig = () => {
             style={{
               backdropFilter: 'blur(10px)',
               WebkitBackdropFilter: 'blur(10px)',
-              background: `color-mix(in oklab,${FIELD} 90%,transparent)`,
+              background: `${FIELD}E6`,
               borderBottom: `1px solid ${HAIR}`,
             }}
           >
@@ -631,7 +630,7 @@ export const OffGridIceRig = () => {
                   <span style={{ color: FROST }}>Ice</span> Rig
                 </h1>
                 <p style={{ maxWidth: '46ch', margin: '22px 0 0', color: INK, fontSize: 'clamp(1.02rem,2vw,1.18rem)', lineHeight: 1.55 }}>
-                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you already have (renewable like solar preferred!).{' '}
+                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you have — solar or other renewables preferred.{' '}
                   <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span> — so this guide gets the threads exact.
                 </p>
               </div>
@@ -667,7 +666,7 @@ export const OffGridIceRig = () => {
             <SectionTag>01 / Parts</SectionTag>
             <h2 style={h2Style}>What to buy</h2>
             <p style={{ ...leadStyle, maxWidth: '60ch' }}>
-              Two groups.{' '} We do not get any affiliate benefits from the links and those are just the pieces of hardware we did the proof-of-concept at Burning Man with. Other ice machines etc. should work well too.{' '}
+              Two groups. These are simply the parts we used for our Burning Man proof-of-concept — we get no affiliate benefit from the links, and other ice machines and components should work just as well.{' '}
               <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and are the key to successfully connecting all the ice rig components together.
             </p>
 
@@ -774,20 +773,20 @@ export const OffGridIceRig = () => {
             <SectionTag>02 / Plumbing</SectionTag>
             <h2 style={h2Style}>Reservoir to ice, fitting by fitting</h2>
             <p style={{ ...leadStyle, maxWidth: '62ch' }}>
-              Follow the line top to bottom. Each blue node is a device; each pale node is a fitting you buy. The pump in the middle sets the one rule that governs everything around it.
+              Follow the line top to bottom. Each blue node is a device; each pale node is a fitting you buy. The pump in the middle sets the one rule that keeps the rest of the build simple.
             </p>
 
             <div style={{ border: `1px solid ${WARM}`, background: 'linear-gradient(180deg,rgba(255,194,75,.14),rgba(255,194,75,.03))', borderRadius: '12px', padding: '20px 22px', margin: '34px 0 40px', maxWidth: '64ch', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
               <span style={{ fontFamily: MONO, fontWeight: 600, color: WARM, fontSize: '.66rem', letterSpacing: '.14em', border: `1px solid ${WARM}`, borderRadius: '6px', padding: '4px 8px', whiteSpace: 'nowrap', marginTop: '2px' }}>PUMP RULE</span>
               <p style={{ margin: 0, color: INK, fontSize: '1.02rem', lineHeight: 1.55 }}>
                 The SEAFLO pump ports are <b style={{ color: WARM }}>1/2" male pipe thread (MNPT)</b>, so every fitting that screws on must be{' '}
-                <b style={{ color: WARM }}>1/2" female pipe thread (FNPT)</b>. This holds for the AC and the DC version alike. Get the gender backward and nothing seals.
+                <b style={{ color: WARM }}>1/2" female pipe thread (FNPT)</b>. This holds for the AC and the DC version alike. Match the gender and every joint seals cleanly.
               </p>
             </div>
 
             <div style={{ maxWidth: '680px', margin: '0 auto' }}>
-              {FLOW.map((node, i) =>
-                node.connector ? <Connector key={i} label={node.connector} /> : <FlowNode key={i} node={node} />
+              {FLOW.map((node) =>
+                node.connector ? <Connector key={node.connector} label={node.connector} /> : <FlowNode key={node.title} node={node} />
               )}
             </div>
           </div>
@@ -815,7 +814,7 @@ export const OffGridIceRig = () => {
               {STEPS.map((s, i) => {
                 const on = !!checked[i];
                 return (
-                  <div key={s.t} onClick={() => toggle(i)} style={{ cursor: 'pointer', display: 'grid', gridTemplateColumns: '54px 1fr', gap: '18px', padding: '20px 12px', borderBottom: `1px solid ${HAIR2}`, alignItems: 'start', borderRadius: '10px' }}>
+                  <div key={s.t} onClick={() => toggle(i)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(i); } }} role="button" tabIndex={0} aria-pressed={on} aria-label={`${on ? 'Completed' : 'Mark complete'}: step ${i + 1}, ${s.t}`} style={{ cursor: 'pointer', display: 'grid', gridTemplateColumns: '54px 1fr', gap: '18px', padding: '20px 12px', borderBottom: `1px solid ${HAIR2}`, alignItems: 'start', borderRadius: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', fontFamily: ARCHIVO, fontWeight: 800, fontSize: on ? '1.3rem' : '1.05rem', border: `1.5px solid ${on ? FROST : 'rgba(255,255,255,.22)'}`, background: on ? FROST : 'transparent', color: on ? FIELD : FROST, transition: 'all .2s ease', flexShrink: 0 }}>
                       {on ? '✓' : `0${i + 1}`.slice(-2)}
                     </div>

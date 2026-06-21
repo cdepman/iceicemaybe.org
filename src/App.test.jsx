@@ -3,16 +3,18 @@ import { MemoryRouter } from 'react-router-dom';
 import { render } from './test-utils';
 import App from './App';
 
-test('renders the home page hero', () => {
+test('renders the home page hero', async () => {
   render(<App />);
   expect(
-    screen.getByRole('heading', { name: /decommodify ice/i })
+    await screen.findByRole('heading', { name: /decommodify ice/i })
   ).toBeInTheDocument();
 });
 
-test('links to the off-grid ice rig manual', () => {
+test('links to the off-grid ice rig manual', async () => {
   render(<App />);
-  const links = screen.getAllByRole('link', { name: /off-grid ice rig/i });
+  const links = await screen.findAllByRole('link', {
+    name: /off-grid ice rig/i,
+  });
   expect(links.length).toBeGreaterThan(0);
   expect(links[0]).toHaveAttribute('href', '/off-grid-ice-rig');
 });

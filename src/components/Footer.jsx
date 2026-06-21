@@ -5,7 +5,7 @@ export const Footer = () => (
     <Text fontSize={{ md: 'sm', base: 'xs' }}>
       This website runs for free on Netlify and is open-source{' '}
       <Link
-        target="_blank"
+        isExternal
         color="blue.300"
         href="https://github.com/cdepman/iceicemaybe.org"
       >

@@ -12,7 +12,7 @@ export const LinkToBuildManual = () => (
       <Button
         p="24px"
         variant="outline"
-        colorScheme="linkedin"
+        colorScheme="blue"
         rightIcon={<ArrowForwardIcon />}
       >
         🧊 Read the Off-Grid Ice Rig build manual

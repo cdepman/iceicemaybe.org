@@ -65,7 +65,17 @@ export default function NavBar() {
             justify={'flex-end'}
             direction={'row'}
             spacing={5}
+            cursor="pointer"
+            role="button"
+            tabIndex={0}
+            aria-label="Make some ice"
             onClick={makeSomeIce}
+            onKeyDown={e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                makeSomeIce();
+              }
+            }}
           >
             <Flex cursor="pointer" fontSize={'12px'} align={'center'}>
               <Box display={{ base: 'none', md: 'flex' }}>Make Some Ice</Box>
@@ -190,18 +200,24 @@ const MobileNav = () => {
       ))}
       <Flex
         py={2}
-        as={Link}
         justify={'space-between'}
         align={'center'}
+        cursor="pointer"
+        role="button"
+        tabIndex={0}
+        aria-label="Make some ice"
+        onClick={makeSomeIce}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            makeSomeIce();
+          }
+        }}
         _hover={{
           textDecoration: 'none',
         }}
       >
-        <Text
-          onClick={makeSomeIce}
-          fontWeight={600}
-          color={useColorModeValue('gray.700', 'gray.200')}
-        >
+        <Text fontWeight={600} color={useColorModeValue('gray.700', 'gray.200')}>
           Make Some Ice
         </Text>
       </Flex>

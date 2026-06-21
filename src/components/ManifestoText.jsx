@@ -8,8 +8,8 @@ export const ManifestoText = () => (
   >
     <Text>
       We're Ice Ice Maybe and we're harvesting sunshine to make clean ice at
-      Burning Man. In 2024, we generated 600 lbs of solar powered ice, 2x what
-      we produced in 2023, and open sourced{' '}
+      Burning Man. In 2024 we generated 600 lbs of solar-powered ice — 2× what
+      we made in 2023 — and open-sourced{' '}
       <Text as="u" color="#00a0dc">
         <Link
           isExternal
@@ -41,17 +41,17 @@ export const ManifestoText = () => (
     <br></br>
     <Text>
       <Text as="u" color="#00a0dc">
-        <a href="https://burningman.org/about/10-principles/">
+        <Link isExternal href="https://burningman.org/about/10-principles/">
           Decommodification
-        </a>
+        </Link>
       </Text>{' '}
       is a core principle of Burning Man. In 2022, Burning Man moved closer to
-      full decommodification by removing coffee purchasing from Center Camp -
+      full decommodification by removing coffee purchasing from Center Camp —
       coffee is provided as a gift by a number of camps. Ice has yet to be
-      decommodified - camps purchase it on playa from an establishment called
+      decommodified — camps purchase it on playa from an establishment called
       Arctica by cash, Visa/Mastercard or Apple/Google pay. Such commercial
       exchange goes directly against the principle of decommodification. Getting
-      ice can be a major burden for camps to retrieve every day - not to mention
+      ice can be a major burden for camps to retrieve every day — not to mention
       the price has been going up. We are proposing to decommodify ice by making
       it close to the cost of water through open-source solar-powered production
       methods.
@@ -60,13 +60,13 @@ export const ManifestoText = () => (
     <Text>
       Another principle of Burning Man is{' '}
       <Text as="u" color="#00a0dc">
-        <a href="https://burningman.org/about/10-principles/">
+        <Link isExternal href="https://burningman.org/about/10-principles/">
           Leaving No Trace
-        </a>
+        </Link>
       </Text>
       . The ice that Arctica serves has a large environmental impact because it
       comes in single-use plastic bags and it must be trucked into the desert on
-      huge, gas-guzzling refrigerated trucks. Our open source solar ice
+      huge, gas-guzzling refrigerated trucks. Our open-source solar ice
       production plans will enable camps to make ice on playa sustainably
       without such a high environmental impact.
     </Text>
@@ -74,11 +74,11 @@ export const ManifestoText = () => (
     <Text>
       In the spirit of{' '}
       <Text as="u" color="#00a0dc">
-        <a href="https://burningman.org/about/10-principles/">
+        <Link isExternal href="https://burningman.org/about/10-principles/">
           Radical Self-reliance
-        </a>
+        </Link>
       </Text>{' '}
-      we are empowering other camps with our open source schematics to
+      we are empowering other camps with our open-source schematics to
       manufacture their own ice on playa without the need for relying on
       Arctica, Visa/Mastercard, or Google/Apple.
     </Text>
@@ -86,10 +86,10 @@ export const ManifestoText = () => (
     <Text>
       In the spirit of{' '}
       <Text as="u" color="#00a0dc">
-        <a href="https://burningman.org/about/10-principles/">Gifting</a>
+        <Link isExternal href="https://burningman.org/about/10-principles/">Gifting</Link>
       </Text>
-      , one of Ice Ice Maybe's major gifts at Burning Man will be our open
-      source plans for solar ice production. We will also be gifting ice in
+      , one of Ice Ice Maybe's major gifts at Burning Man will be our
+      open-source plans for solar ice production. We will also be gifting ice in
       various fun formats. We want to start small, creating enough ice to
       provide to ourselves and as gifts to other camps and individuals. In
       future iterations, we can scale up and streamline our ice making

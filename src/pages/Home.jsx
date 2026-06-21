@@ -5,7 +5,6 @@ import {
   VStack,
   Heading,
   Image,
-  Spacer,
   useColorModeValue,
 } from '@chakra-ui/react';
 import theme from '../theme';
@@ -32,6 +31,7 @@ export const Home = () => {
       <Box textAlign="center" fontSize="xl">
         <VStack pt={28} spacing={8}>
           <Heading
+            as="h1"
             w={{
               '2xl': '40%',
               xl: '50%',
@@ -53,7 +53,6 @@ export const Home = () => {
             <Image src={solarPanels} />
           </Box>
           <Footer />
-          <Spacer />
         </VStack>
       </Box>
     </ChakraProvider>
