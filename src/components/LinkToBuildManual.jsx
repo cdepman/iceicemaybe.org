@@ -19,7 +19,7 @@ export const LinkToBuildManual = () => (
       </Button>
     </Link>
     <Text fontSize={{ md: 'sm', base: 'xs' }} color="gray.500" pt={2}>
-      Open-source field build — reservoir, pump &amp; ice machine off solar.
+      Open-source field build: reservoir, pump &amp; ice machine off solar.
     </Text>
   </Box>
 );

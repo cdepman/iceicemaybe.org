@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { PageMeta } from '../components/PageMeta';
 
 /*
- * Off-Grid Ice Rig — Field Build Manual.
+ * Off-Grid Ice Rig: Field Build Manual.
  *
  * Ported from a standalone "Design Component" HTML export into a first-class
  * React page. The original relied on a bundled `dc-runtime` that fetched React
@@ -26,7 +26,7 @@ const ARCHIVO = "'Archivo',sans-serif";
 
 // --- content -----------------------------------------------------------------
 // `overview` is the hero the user already lands on, so it's intentionally not a
-// jump target — no nav tab and no "Jump to" dot. While in the hero, no tab is
+// jump target, with no nav tab and no "Jump to" dot. While in the hero, no tab is
 // highlighted; the first real section activates as you scroll down.
 const SECTIONS = [
   ['parts', 'Parts'],
@@ -630,8 +630,8 @@ export const OffGridIceRig = () => {
                   <span style={{ color: FROST }}>Ice</span> Rig
                 </h1>
                 <p style={{ maxWidth: '46ch', margin: '22px 0 0', color: INK, fontSize: 'clamp(1.02rem,2vw,1.18rem)', lineHeight: 1.55 }}>
-                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you have — solar or other renewables preferred.{' '}
-                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span> — so this guide gets the threads exact.
+                  A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you have, ideally solar or another renewable.{' '}
+                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span>, so this guide gets the threads exact.
                 </p>
               </div>
 
@@ -666,7 +666,7 @@ export const OffGridIceRig = () => {
             <SectionTag>01 / Parts</SectionTag>
             <h2 style={h2Style}>What to buy</h2>
             <p style={{ ...leadStyle, maxWidth: '60ch' }}>
-              Two groups. These are simply the parts we used for our Burning Man proof-of-concept — we get no affiliate benefit from the links, and other ice machines and components should work just as well.{' '}
+              Two groups. These are simply the parts we used for our Burning Man proof-of-concept. We get no affiliate benefit from the links, and other ice machines and components should work just as well.{' '}
               <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and are the key to successfully connecting all the ice rig components together.
             </p>
 
@@ -799,7 +799,7 @@ export const OffGridIceRig = () => {
             <h2 style={h2Style}>Build order</h2>
             <p style={{ ...leadStyle, maxWidth: '62ch' }}>
               Plumb the rig first and prove it on a wall outlet. Move to solar only once it holds pressure without leaks.{' '}
-              <span style={{ color: FROST }}>Tap a step to check it off</span> — your progress is saved.
+              <span style={{ color: FROST }}>Tap a step to check it off</span>. Your progress is saved.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', margin: '30px 0 8px', flexWrap: 'wrap' }}>
