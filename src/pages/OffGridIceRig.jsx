@@ -668,7 +668,7 @@ export const OffGridIceRig = () => {
             <h2 style={h2Style}>What to buy</h2>
             <p style={{ ...leadStyle, maxWidth: '60ch' }}>
               Two groups.{' '} We do not get any affiliate benefits from the links and those are just the pieces of hardware we did the proof-of-concept at Burning Man with. Other ice machines etc. should work well too.{' '}
-              <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and where almost every failed build goes wrong.
+              <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and are the key to successfully connecting all the ice rig components together.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '42px 0 18px' }}>
