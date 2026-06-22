@@ -8,7 +8,7 @@ Built with [Vite](https://vite.dev/), [React](https://react.dev/), [Chakra UI](h
 
 ## Getting started
 
-Requires Node 18+ and npm.
+Requires Node 22+ and npm.
 
 ```sh
 npm install
