@@ -54,24 +54,24 @@ const DEVICES = [
   {
     role: 'The heart',
     name: 'SEAFLO diaphragm pump',
-    does: 'Pressurizes water on demand for a steady feed. A SEAFLO 55 Series pump pulls between 96 W and 204 W depending on the load, operating conditions, and model.',
-    tags: ['12V DC / 120V AC', '96-204W (load-dependent)', '1/2" MNPT ports', 'self-priming'],
+    does: 'Pressurizes water on demand for a steady feed. The linked SEAFLO 55 Series system is a 115V AC, 5.0 GPM, 60 PSI pump; DC versions exist, but wire and power-budget them from the nameplate on your unit.',
+    tags: ['115V AC linked unit', '5.0 GPM / 60 PSI', 'verify port thread', 'self-priming'],
     core: true,
     buy: 'https://www.amazon.com/dp/B0FQWQHP94?th=1',
   },
   {
     role: 'Output',
     name: 'EUHOMY ice maker',
-    does: 'Freezes the pressurized water into ice. Draws roughly 200-240 W while running, though this varies by model.',
-    tags: ['120V AC', '200-240W (model-dependent)', '1/4" OD inlet', 'portable'],
+    does: 'Freezes the pressurized water into ice. The linked EUHOMY unit is listed as a 110 lb/day, 33 lb storage commercial machine that needs a water supply and gravity drain; confirm inlet size and electrical draw in the manual for your exact model.',
+    tags: ['120V AC typical', 'verify nameplate watts', 'verify inlet size', 'gravity drain'],
     core: false,
     buy: 'https://www.amazon.com/dp/B0GTYG71G4',
   },
   {
     role: 'Power',
     name: 'Solar power system',
-    does: 'Runs the pump and the ice maker off the sun. With both running, plan for a combined peak draw of roughly 300-440 W and size the inverter, battery bank, and panels with headroom above that.',
-    tags: ['panel + controller', 'battery bank', 'inverter for AC', '~300-440W combined peak'],
+    does: 'Runs the pump and the ice maker off the sun. Size the inverter, battery bank, fuses, and panels from the ice maker nameplate plus the pump nameplate, then add headroom for compressor startup and hot-weather duty cycles.',
+    tags: ['panel + controller', 'battery bank', 'inverter for AC', 'size from nameplates'],
     core: false,
   },
 ];
@@ -102,18 +102,19 @@ const STEPS = [
   { t: 'Build the inlet line', b: 'Thread the 3/4" FHT × barb onto the spigot. Run clear hose to the 1/2" FNPT × barb and lock both ends with worm-gear clamps.' },
   { t: 'Connect the pump inlet', b: 'Thread the 1/2" FNPT × barb onto the male inlet port with PTFE tape. The clear hose now feeds the pump.' },
   { t: 'Build the outlet line', b: 'Thread the 1/2" FNPT × 1/4" push-to-connect onto the male outlet port with PTFE tape.' },
-  { t: 'Connect the ice maker', b: 'Cut the 1/4" tube square, push it into the connect fitting, then into the ice maker water inlet. Tug both ends to confirm.' },
-  { t: 'Wire the power', b: 'A DC pump fuses straight to the battery bank; an AC pump runs off the inverter or shore power alongside the ice maker.' },
+  { t: 'Connect the ice maker', b: 'If your ice maker accepts 1/4" OD tubing, cut the tube square, push it into the connect fitting, then into the water inlet. Tug both ends to confirm.' },
+  { t: 'Wire the power', b: 'Fuse DC pumps at the battery bank. AC pumps and the ice maker run from shore power or an inverter sized for the combined running load plus compressor startup surge.' },
   { t: 'Test dry, then wet', b: 'Power the pump first and check every joint for leaks. Then start the ice maker and watch the first full cycle before walking away.' },
 ];
 
 const NOTES = [
-  { k: 'A', t: 'Thread gender, every time', b: 'Pump ports are male, so every fitting that screws on is female. Get this one rule right and the joints seal.' },
+  { k: 'A', t: 'Thread gender', b: 'Pump ports are male, so every fitting that screws on is female. Get this one rule right and the joints seal.' },
   { k: 'B', t: 'Tape pipe threads only', b: 'PTFE tape on tapered NPT joints. Hose thread (FHT) seals on a gasket and needs none.' },
   { k: 'C', t: 'Match barb to hose ID', b: 'Size the barb to the inner diameter of the hose, not the outer, so the clamp seals tight.' },
   { k: 'D', t: 'Square-cut the 1/4" tube', b: 'Push-to-connect fittings need a clean, deburred, square end to seat and hold pressure.' },
-  { k: 'E', t: 'Give the condenser air', b: 'Portable ice makers dump heat out the back. Leave clearance and brush dust off the coils or output drops.' },
-  { k: 'F', t: 'Shade the reservoir', b: 'Sun-warmed feed water freezes slower and makes softer cubes. Keep the tank shaded or insulated.' },
+  { k: 'E', t: 'Give the condenser air', b: 'Ice makers dump heat through the condenser. Leave clearance and brush dust off the coils or output drops.' },
+  { k: 'F', t: 'Mind the ice-maker inlet pressure', b: 'Commercial ice makers usually specify an acceptable supply-pressure range. Put a regulator between pump and ice maker if your pump can exceed the model\'s limit.' },
+  { k: 'G', t: 'Shade the reservoir', b: 'Sun-warmed feed water freezes slower and makes softer cubes. Keep the tank shaded or insulated.' },
 ];
 
 // SVG icons for the water-path nodes.
@@ -171,8 +172,8 @@ const FLOW = [
     kind: 'pump',
     label: 'Device / the heart',
     title: 'SEAFLO pump',
-    desc: 'Self-priming diaphragm pump. Both ports are male, so both fittings are female. AC and DC versions plumb identically.',
-    spec: 'ports: 1/2" MNPT (male)',
+    desc: 'Self-priming diaphragm pump. The proof-of-concept used male pipe-thread ports, so the mating fittings were female; verify the ports on your exact pump before buying adapters.',
+    spec: 'verify port thread on pump label/manual',
     icon: (
       <Icon>
         <rect x="4" y="7" width="12" height="10" rx="2" />
@@ -201,7 +202,7 @@ const FLOW = [
     kind: 'source',
     label: 'Device / output',
     title: 'Ice machine',
-    desc: '1/4" water inlet receives the tube. Usually runs on 120V AC.',
+    desc: 'Water inlet receives the feed line. Usually runs on 120V AC; verify inlet size, drain requirements, and pressure range in the manual.',
     icon: (
       <Icon>
         <path d="M12 3v18M4 7l16 10M20 7L4 17" />
@@ -494,10 +495,10 @@ export const OffGridIceRig = () => {
     <div className="ogir-root" style={rootStyle}>
       <PageMeta
         title="Off-Grid Ice Rig Build Manual | Ice Ice Maybe"
-        description="Open-source field manual for building an off-grid ice rig with a reservoir, pump, plumbing fittings, and portable ice maker."
+        description="Open-source field manual for building an off-grid ice rig with a reservoir, pump, plumbing fittings, and ice maker."
         path="/off-grid-ice-rig"
         image="/off-grid-ice-rig/og-image.jpg"
-        imageAlt="Off-grid ice rig with reservoir, pump, plumbing, and portable ice maker"
+        imageAlt="Off-grid ice rig with reservoir, pump, plumbing, and ice maker"
         type="article"
       />
       <style>{PAGE_CSS}</style>
@@ -631,7 +632,7 @@ export const OffGridIceRig = () => {
                 </h1>
                 <p style={{ maxWidth: '46ch', margin: '22px 0 0', color: INK, fontSize: 'clamp(1.02rem,2vw,1.18rem)', lineHeight: 1.55 }}>
                   A reservoir, a pump, and an ice machine built from off-the-shelf parts and run off whatever power you have, ideally solar or another renewable.{' '}
-                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span>, so this guide gets the threads exact.
+                  <span style={{ color: FROST, fontWeight: 600 }}>The build hinges on the plumbing fittings</span>, so this guide shows the thread path and flags the specs to verify on your exact devices.
                 </p>
               </div>
 
@@ -666,7 +667,7 @@ export const OffGridIceRig = () => {
             <SectionTag>01 / Parts</SectionTag>
             <h2 style={h2Style}>What to buy</h2>
             <p style={{ ...leadStyle, maxWidth: '60ch' }}>
-              Two groups. These are simply the parts we used for our Burning Man proof-of-concept. We get no affiliate benefit from the links, and other ice machines and components should work just as well.{' '}
+              Two groups. These are simply the parts we used for our Burning Man proof-of-concept. We get no affiliate benefit from the links, and other ice machines and components should work if their inlet, drain, pressure, and power requirements match the rig.{' '}
               <strong style={{ color: INK, fontWeight: 600 }}>Fittings</strong> are the small parts that connect them, and are the key to successfully connecting all the ice rig components together.
             </p>
 
@@ -773,14 +774,14 @@ export const OffGridIceRig = () => {
             <SectionTag>02 / Plumbing</SectionTag>
             <h2 style={h2Style}>Reservoir to ice, fitting by fitting</h2>
             <p style={{ ...leadStyle, maxWidth: '62ch' }}>
-              Follow the line top to bottom. Each blue node is a device; each pale node is a fitting you buy. The pump in the middle sets the one rule that keeps the rest of the build simple.
+              Follow the line top to bottom. Each blue node is a device; each pale node is a fitting you buy. The pump in the middle sets the rule for this proof-of-concept, but check the port markings on your exact pump before ordering adapters.
             </p>
 
             <div style={{ border: `1px solid ${WARM}`, background: 'linear-gradient(180deg,rgba(255,194,75,.14),rgba(255,194,75,.03))', borderRadius: '12px', padding: '20px 22px', margin: '34px 0 40px', maxWidth: '64ch', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
               <span style={{ fontFamily: MONO, fontWeight: 600, color: WARM, fontSize: '.66rem', letterSpacing: '.14em', border: `1px solid ${WARM}`, borderRadius: '6px', padding: '4px 8px', whiteSpace: 'nowrap', marginTop: '2px' }}>PUMP RULE</span>
               <p style={{ margin: 0, color: INK, fontSize: '1.02rem', lineHeight: 1.55 }}>
-                The SEAFLO pump ports are <b style={{ color: WARM }}>1/2" male pipe thread (MNPT)</b>, so every fitting that screws on must be{' '}
-                <b style={{ color: WARM }}>1/2" female pipe thread (FNPT)</b>. This holds for the AC and the DC version alike. Match the gender and every joint seals cleanly.
+                The proof-of-concept pump used <b style={{ color: WARM }}>1/2" male pipe-thread ports</b>, so the fittings that screwed onto it were{' '}
+                <b style={{ color: WARM }}>1/2" female pipe thread (FNPT)</b>. If your SEAFLO or replacement pump ships with a different port adapter, match that thread instead.
               </p>
             </div>
 
@@ -833,7 +834,7 @@ export const OffGridIceRig = () => {
         <section id="notes" style={SECTION}>
           <div style={CONTAINER}>
             <SectionTag>04 / Field notes</SectionTag>
-            <h2 style={h2Style}>What trips people up</h2>
+            <h2 style={h2Style}>Gotchas</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '14px', marginTop: '32px' }}>
               {NOTES.map((n) => (
                 <div key={n.k} style={{ display: 'flex', gap: '16px', border: `1px solid ${HAIR}`, borderRadius: '13px', padding: '20px', background: 'rgba(255,255,255,.02)' }}>

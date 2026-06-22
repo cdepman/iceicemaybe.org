@@ -5,7 +5,12 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
+    // Dedicated port so this app never collides with other local dev servers
+    // (e.g. Next.js, which also defaults to 3000). strictPort makes a conflict
+    // fail loudly instead of silently drifting to another port and leaving you
+    // looking at a stale tab — the usual "HMR is broken" red herring.
+    port: 5173,
+    strictPort: true,
     open: true,
   },
   build: {

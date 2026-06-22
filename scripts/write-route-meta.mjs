@@ -6,12 +6,12 @@ const routePages = [
     outputPath: 'build/off-grid-ice-rig/index.html',
     title: 'Off-Grid Ice Rig Build Manual | Ice Ice Maybe',
     description:
-      'Open-source field manual for building an off-grid ice rig with a reservoir, pump, plumbing fittings, and portable ice maker.',
+      'Open-source field manual for building an off-grid ice rig with a reservoir, pump, plumbing fittings, and ice maker.',
     canonical: 'https://www.iceicemaybe.org/off-grid-ice-rig',
     type: 'article',
     image: 'https://www.iceicemaybe.org/off-grid-ice-rig/og-image.jpg',
     imageAlt:
-      'Off-grid ice rig with reservoir, pump, plumbing, and portable ice maker',
+      'Off-grid ice rig with reservoir, pump, plumbing, and ice maker',
   },
 ];
 
